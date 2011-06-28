@@ -1,0 +1,11 @@
+sudo fastboot erase boot
+sudo fastboot erase misc
+sudo fastboot erase system
+sudo fastboot erase userdata
+sudo fastboot erase cache 
+
+sudo fastboot flash:raw boot boot.img
+sudo fastboot flash system system.img
+sudo fastboot flash userdata userdata.img
+
+sudo fastboot reboot
