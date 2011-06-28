@@ -160,5 +160,5 @@ sudo apt-get install gstreamer0.10-ffmpeg gstreamer0.10-plugins-bad -y
 #deb http://archive.canonical.com/ubuntu maverick partner
 #sudo apt-get update
 sudo apt-get install sun-java6-jdk -y
-
+sudo apt-get install openssh-server -y
 
