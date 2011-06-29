@@ -164,3 +164,8 @@ sudo apt-get install openssh-server -y
 
 #http://files.zentus.com/sqlitejdbc/sqlitejdbc-v056.jar
 sudo cp share/sqlitejdbc-v056.jar /usr/share/java
+
+
+
+# for asf files
+sudo apt-get install gstreamer0.10-plugins-ugly -y
