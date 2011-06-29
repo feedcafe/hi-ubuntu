@@ -162,3 +162,5 @@ sudo apt-get install gstreamer0.10-ffmpeg gstreamer0.10-plugins-bad -y
 sudo apt-get install sun-java6-jdk -y
 sudo apt-get install openssh-server -y
 
+#http://files.zentus.com/sqlitejdbc/sqlitejdbc-v056.jar
+sudo cp share/sqlitejdbc-v056.jar /usr/share/java
