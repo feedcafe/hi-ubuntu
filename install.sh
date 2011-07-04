@@ -9,17 +9,12 @@ sudo apt-get install leafpad -y --force-yes
 sudo apt-get install rar unrar tree -y --force-yes
 
 #ime
-sudo apt-get install ibus ibus-pinyin ibus-table-wubi
+sudo apt-get install ibus ibus-pinyin ibus-table-wubi -y
 
 #feige
 sudo apt-get install iptux -y --force-yes
 #feiqiu
 sudo apt-get install g2ipmsg -y --force-yes
-
-#fetion
-sudo apt-add-repository ppa:happyaron/ppa
-sudo apt-get update
-sudo apt-get install openfetion -y --force-yes
 
 #usbboot
 sudo apt-get install libtool -y --force-yes
@@ -53,7 +48,7 @@ sudo apt-get install thunderbird -y --force-yes
 #The default installation of Ubuntu 10.04 missing the following packages
 #that needed by android
 
-sudo apt-get install g++
+sudo apt-get install g++ -y
 sudo apt-get install bison flex
 sudo apt-get install zlib1g-dev libssl-dev -y --force-yes
 sudo apt-get install libx11-dev -y --force-yes
@@ -79,14 +74,19 @@ sudo apt-get install flashgot -y
 #firefox flash plugin
 sudo apt-get install flashplugin-installer
 
-
-sudo echo 'deb http://archive.canonical.com/ubuntu maverick partner' >> /etc/apt/sources.list
-#sudo apt-get update
+#/etc/apt/sources.list
+#deb http://archive.canonical.com/ubuntu maverick partner
+sudo apt-get update
 sudo apt-get install sun-java6-jdk -y
 
 wget -c http://files.zentus.com/sqlitejdbc/sqlitejdbc-v056.jar
 sudo cp ~/sqlitejdbc-v056.jar /usr/share/java
 
+
+#fetion
+sudo apt-add-repository ppa:happyaron/ppa
+sudo apt-get update
+sudo apt-get install openfetion -y --force-yes
 
 
 
