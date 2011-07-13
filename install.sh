@@ -36,7 +36,7 @@ sudo apt-get install gstreamer0.10-plugins-ugly -y
 sudo apt-get install ctags #cscope
 sudo apt-get install git-core -y --force-yes
 sudo apt-get install subversion -y --force-yes
-
+sudo apt-get install mercurial -y
 #make menuconfig need this
 sudo apt-get install libncurses5-dev
 
