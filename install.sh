@@ -55,13 +55,14 @@ sudo apt-get install libx11-dev -y --force-yes
 sudo apt-get install gperf
 sudo apt-get install nfs-kernel-server -y --force-yes
 sudo apt-get install libglib2.0-dev -y --force-yes
+sudo apt-get install ant1.8 -y
 
 sudo apt-get install tftp tftpd openbsd-inetd
 sudo mkdir /tftpboot
 sudo chmod -R 777 /tftpboot
 sudo chown -R nobody /tftpboot
-
-
+# need to edit /etc/inetd.conf 
+# sudo /etc/init.d/openbsd-inetd restart
 sudo apt-get install openssh-server -y
 
 sudo apt-get install chmsee -y --force-yes
@@ -88,6 +89,8 @@ sudo apt-add-repository ppa:happyaron/ppa
 sudo apt-get update
 sudo apt-get install openfetion -y --force-yes
 
+#beyound compare
+sudo dpkg -i /opt/software/ubuntu/bcompare/bcompare-3.2.4.13298_i386.deb
 
 
 #sudo apt-get install amule-gnome-support
