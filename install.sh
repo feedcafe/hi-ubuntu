@@ -92,6 +92,9 @@ sudo apt-get install openfetion -y --force-yes
 #beyound compare
 sudo dpkg -i /opt/software/ubuntu/bcompare/bcompare-3.2.4.13298_i386.deb
 
+# for freerunner
+sudo apt-get install openocd -y
+sudo apt-get install dfu-util
 
 #sudo apt-get install amule-gnome-support
 
