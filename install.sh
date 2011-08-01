@@ -99,6 +99,8 @@ sudo dpkg -i /opt/software/ubuntu/bcompare/bcompare-3.2.4.13298_i386.deb
 sudo apt-get install openocd -y
 sudo apt-get install dfu-util
 
+sudo apt-get install stardict
+
 #sudo apt-get install amule-gnome-support
 
 #sudo apt-get install xchm
@@ -125,4 +127,3 @@ sudo apt-get install dfu-util
 #sudo apt-get install emesene
 #sudo apt-get install eva
 
-#sudo apt-get install stardict
