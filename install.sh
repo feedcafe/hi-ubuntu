@@ -21,6 +21,9 @@ sudo apt-get install libtool -y --force-yes
 sudo apt-get install libconfuse0
 sudo apt-get install libconfuse-dev
 sudo apt-get install libusb-dev -y --force-yes
+sudo apt-get install libusb-1.0-0-dev
+
+
 
 #sudo apt-get install mplayer-nogui
 sudo apt-get install mplayer -y
