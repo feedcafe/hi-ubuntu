@@ -101,6 +101,15 @@ sudo apt-get install dfu-util
 
 sudo apt-get install stardict
 
+# replace openoffice with libreoffice
+sudo apt-get purge "openoffice*.*"
+sudo add-apt-repository ppa:libreoffice/ppa
+sudo apt-get update
+sudo apt-get remove --purge openoffice*.*
+sudo apt-get install libreoffice
+sudo apt-get install libreoffice-gnome
+
+
 #sudo apt-get install amule-gnome-support
 
 #sudo apt-get install xchm
