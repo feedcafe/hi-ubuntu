@@ -23,6 +23,8 @@ sudo apt-get install libconfuse-dev
 sudo apt-get install libusb-dev -y --force-yes
 sudo apt-get install libusb-1.0-0-dev
 
+# make xconfig needs this
+sudo apt-get install libqt4-dev -y
 
 
 #sudo apt-get install mplayer-nogui
