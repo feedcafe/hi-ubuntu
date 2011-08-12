@@ -116,3 +116,9 @@ fi
 PATH="/usr/lib/jvm/java-6-sun/bin:$PATH"  
 CLASSPATH="/usr/lib/jvm/java-6-sun/lib"  
 JAVA_HOME="/usr/lib/jvm/java-6-sun"
+export PATH=$PATH:/opt/android-sdk-linux/tools
+
+
+
+export TARGET_PHONE_TYPE=GG
+export ANDROID_SOURCE=/source/android-2.2/
