@@ -1,5 +1,4 @@
-
-#deb http://cz.archive.ubuntu.com/ubuntu dapper main multiverse
+sudo deb add-apt-repository "deb http://cz.archive.ubuntu.com/ubuntu dapper main multiverse"
 sudo apt-get install vim-gnome vim -y --force-yes
 sudo apt-get install sun-java5-jdk
 
@@ -81,7 +80,7 @@ sudo apt-get install flashgot -y
 sudo apt-get install flashplugin-installer
 
 #/etc/apt/sources.list
-#deb http://archive.canonical.com/ubuntu maverick partner
+sudo deb add-apt-repository "deb http://archive.canonical.com/ubuntu maverick partner"
 sudo apt-get update
 sudo apt-get install sun-java6-jdk -y
 
