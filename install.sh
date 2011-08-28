@@ -13,7 +13,7 @@ sudo apt-get install human-theme
 sudo apt-get install nautilus-open-terminal -y --force-yes
 sudo apt-get install leafpad -y --force-yes
 sudo apt-get install rar unrar tree -y --force-yes
-sudo apt-get install p7zip
+sudo apt-get install p7zip-full
 
 # ime
 sudo apt-get install ibus ibus-pinyin ibus-table-wubi -y
