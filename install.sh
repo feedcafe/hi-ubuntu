@@ -1,38 +1,41 @@
-sudo deb add-apt-repository "deb http://cz.archive.ubuntu.com/ubuntu dapper main multiverse"
-sudo apt-get install vim-gnome vim -y --force-yes
-sudo apt-get install sun-java5-jdk
+# /etc/apt/sources.list
+# for sun-java6-jdk
+sudo add-apt-repository "deb http://archive.canonical.com/ubuntu maverick partner"
+
+# for openfetion
+sudo apt-add-repository ppa:happyaron/ppa
+sudo apt-get update
+
+sudo apt-get install openfetion -y --force-yes
+sudo apt-get install sun-java6-jdk -y
 
 sudo apt-get install human-theme
 sudo apt-get install nautilus-open-terminal -y --force-yes
 sudo apt-get install leafpad -y --force-yes
 sudo apt-get install rar unrar tree -y --force-yes
+sudo apt-get install p7zip
 
-#ime
+# ime
 sudo apt-get install ibus ibus-pinyin ibus-table-wubi -y
 
-#feige
-sudo apt-get install iptux -y --force-yes
-#feiqiu
+# feiqiu
 sudo apt-get install g2ipmsg -y --force-yes
 
-#usbboot
+# usbboot
 sudo apt-get install libtool -y --force-yes
 sudo apt-get install libconfuse0
 sudo apt-get install libconfuse-dev
 sudo apt-get install libusb-dev -y --force-yes
 sudo apt-get install libusb-1.0-0-dev
 
-# make xconfig needs this
+# make xconfig needs qt
 sudo apt-get install libqt4-dev -y
-
 
 #sudo apt-get install mplayer-nogui
 sudo apt-get install mplayer -y
 #sudo apt-get install mplayer-skin
 sudo apt-get install smplayer -y
 
-# firefox cache directory
-# /home/fdbai/.mozilla/firefox/n87lqakk.default/Cache
 sudo apt-get install gstreamer0.10-ffmpeg gstreamer0.10-plugins-bad -y
 # for asf files
 sudo apt-get install gstreamer0.10-plugins-ugly -y
@@ -41,11 +44,11 @@ sudo apt-get install ctags #cscope
 sudo apt-get install git-core -y --force-yes
 sudo apt-get install subversion -y --force-yes
 sudo apt-get install mercurial -y
+
 #make menuconfig need this
 sudo apt-get install libncurses5-dev
 
 sudo apt-get install ckermit automake -y --force-yes
-
 
 sudo apt-get install thunderbird -y --force-yes
 
@@ -79,19 +82,9 @@ sudo apt-get install flashgot -y
 #firefox flash plugin
 sudo apt-get install flashplugin-installer
 
-#/etc/apt/sources.list
-sudo deb add-apt-repository "deb http://archive.canonical.com/ubuntu maverick partner"
-sudo apt-get update
-sudo apt-get install sun-java6-jdk -y
 
 wget -c http://files.zentus.com/sqlitejdbc/sqlitejdbc-v056.jar
 sudo cp ~/sqlitejdbc-v056.jar /usr/share/java
-
-
-#fetion
-sudo apt-add-repository ppa:happyaron/ppa
-sudo apt-get update
-sudo apt-get install openfetion -y --force-yes
 
 #beyound compare
 sudo dpkg -i /opt/software/ubuntu/bcompare/bcompare-3.2.4.13298_i386.deb
@@ -103,13 +96,12 @@ sudo apt-get install dfu-util
 sudo apt-get install stardict
 
 # replace openoffice with libreoffice
-sudo apt-get purge "openoffice*.*"
-sudo add-apt-repository ppa:libreoffice/ppa
-sudo apt-get update
-sudo apt-get remove --purge openoffice*.*
-sudo apt-get install libreoffice
-sudo apt-get install libreoffice-gnome
-
+#sudo apt-get purge "openoffice*.*"
+#sudo add-apt-repository ppa:libreoffice/ppa
+#sudo apt-get update
+#sudo apt-get remove --purge openoffice*.*
+#sudo apt-get install libreoffice
+#sudo apt-get install libreoffice-gnome
 
 #sudo apt-get install amule-gnome-support
 
@@ -120,7 +112,6 @@ sudo apt-get install libreoffice-gnome
 #hex editor
 #sudo apt-get install ghex
 
-#sudo apt-get -y install openocd
 #sudo apt-get install meld
 
 #svn import svn://192.168.1.87/mips/kernel/linux-2.6.32.9/branches/mmc/ -m "create mmc branch for z800"
@@ -132,8 +123,17 @@ sudo apt-get install libreoffice-gnome
 #how to remove a package
 #sudo apt-get install hexcurse-
 
-
 #sudo apt-get install amsn
 #sudo apt-get install emesene
 #sudo apt-get install eva
+
+# feige
+# sudo apt-get install iptux -y --force-yes
+
+# sudo add-apt-repository "deb http://cz.archive.ubuntu.com/ubuntu dapper main multiverse"
+# sudo apt-get install vim-gnome vim -y --force-yes
+# sudo apt-get install sun-java5-jdk
+
+# firefox cache directory
+# /home/fdbai/.mozilla/firefox/n87lqakk.default/Cache
 
