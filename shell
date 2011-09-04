@@ -1,0 +1,2 @@
+delete empty directory
+find . -type d -empty -exec rmdir {} \;
