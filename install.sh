@@ -52,6 +52,8 @@ sudo apt-get install ckermit automake -y --force-yes
 
 sudo apt-get install thunderbird -y --force-yes
 
+sudo apt-get install system-config-samba -y
+
 #The default installation of Ubuntu 10.04 missing the following packages
 #that needed by android
 
