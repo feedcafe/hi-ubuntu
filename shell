@@ -1,2 +1,7 @@
-delete empty directory
+# delete empty directory
 find . -type d -empty -exec rmdir {} \;
+
+
+# patch kernel
+fdbai@fdbai-desktop:~/$ cd linux-2.6.31.3/
+fdbai@fdbai-desktop:~/linux-2.6.31.3$ patch -p1 < ../jz/linux-2.6.31.3-release-20110719.patch

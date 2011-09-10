@@ -1,0 +1,1 @@
+mkbootimg  --kernel arch/mips/boot/compressed/zImage --ramdisk arch/mips/boot/ramdisk.cpio.img --output boot.img
