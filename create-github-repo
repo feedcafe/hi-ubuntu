@@ -1,0 +1,19 @@
+
+Global setup:
+ Set up git
+  git config --global user.name "Bai"
+  git config --global user.email fudongbai@gmail.com
+        Next steps:
+  mkdir linux-2.6.31.3-lepus
+  cd linux-2.6.31.3-lepus
+  git init
+  touch README
+  git add README
+  git commit -m 'first commit'
+  git remote add origin git@github.com:linuxabc/linux-2.6.31.3-lepus.git
+  git push -u origin master
+      Existing Git Repo?
+  cd existing_git_repo
+  git remote add origin git@github.com:linuxabc/linux-2.6.31.3-lepus.git
+  git push -u origin master
+
