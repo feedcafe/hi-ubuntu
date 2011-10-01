@@ -7,6 +7,7 @@ sudo apt-add-repository ppa:happyaron/ppa
 sudo apt-get update
 
 sudo apt-get install openfetion -y --force-yes
+
 sudo apt-get install sun-java6-jdk -y
 
 sudo apt-get install human-theme
@@ -14,6 +15,14 @@ sudo apt-get install nautilus-open-terminal -y --force-yes
 sudo apt-get install leafpad -y --force-yes
 sudo apt-get install rar unrar tree -y --force-yes
 sudo apt-get install p7zip-full
+
+# mgp file, MagicPoint, an X11 based presentation tool(like powerpoint)
+sudo apt-get install mgp -y
+
+sudo apt-get install gnome-device-manager -y
+
+#Chromium, fast and best browser
+sudo apt-get install chromium-browser -y
 
 # ime
 sudo apt-get install ibus ibus-pinyin ibus-table-wubi -y
@@ -135,6 +144,8 @@ sudo apt-get install stardict
 # sudo add-apt-repository "deb http://cz.archive.ubuntu.com/ubuntu dapper main multiverse"
 # sudo apt-get install vim-gnome vim -y --force-yes
 # sudo apt-get install sun-java5-jdk
+# sudo apt-get install recordmydesktop gtk-recordmydesktop 
+# sudo apt-get install xvidcap istanbul -y
 
 # firefox cache directory
 # /home/fdbai/.mozilla/firefox/n87lqakk.default/Cache
