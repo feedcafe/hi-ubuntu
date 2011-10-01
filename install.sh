@@ -21,7 +21,7 @@ sudo apt-get install mgp -y
 
 sudo apt-get install gnome-device-manager -y
 
-#Chromium, fast and best browser
+# Chromium, fast and best browser
 sudo apt-get install chromium-browser -y
 
 # ime
@@ -54,7 +54,7 @@ sudo apt-get install git-core -y --force-yes
 sudo apt-get install subversion -y --force-yes
 sudo apt-get install mercurial -y
 
-#make menuconfig need this
+# make menuconfig need this
 sudo apt-get install libncurses5-dev
 
 sudo apt-get install ckermit automake -y --force-yes
@@ -63,8 +63,8 @@ sudo apt-get install thunderbird -y --force-yes
 
 sudo apt-get install system-config-samba -y
 
-#The default installation of Ubuntu 10.04 missing the following packages
-#that needed by android
+# The default installation of Ubuntu 10.04 missing the following packages
+# that needed by android
 
 sudo apt-get install g++ -y
 sudo apt-get install bison flex
@@ -85,19 +85,19 @@ sudo apt-get install openssh-server -y
 
 sudo apt-get install chmsee -y --force-yes
 
-#to fix evince parsing Chinese issue
+# to fix evince parsing Chinese issue
 sudo apt-get install poppler-data
 
 sudo apt-get install flashgot -y
 
-#firefox flash plugin
+# firefox flash plugin
 sudo apt-get install flashplugin-installer
 
 
 wget -c http://files.zentus.com/sqlitejdbc/sqlitejdbc-v056.jar
 sudo cp ~/sqlitejdbc-v056.jar /usr/share/java
 
-#beyound compare
+# beyound compare
 sudo dpkg -i /opt/software/ubuntu/bcompare/bcompare-3.2.4.13298_i386.deb
 
 # for freerunner
