@@ -1,7 +1,44 @@
+########################################################################
 # delete empty directory
 find . -type d -empty -exec rmdir {} \;
 
 
+########################################################################
 # patch kernel
 fdbai@fdbai-desktop:~/$ cd linux-2.6.31.3/
 fdbai@fdbai-desktop:~/linux-2.6.31.3$ patch -p1 < ../jz/linux-2.6.31.3-release-20110719.patch
+
+
+########################################################################
+diff -ruNp --exclude-from Documentation/dontdiff a b >patch
+
+
+########################################################################
+# connect to internet through usb0 when using usb tethering
+# visit intranet through eth0
+sudo ip route change to default dev usb0 via 192.168.42.129
+
+
+#fdbai@fdbai-desktop:~$ ip route list
+#192.168.182.0/24 dev vmnet8  proto kernel  scope link  src 192.168.182.1
+#192.168.198.0/24 dev vmnet1  proto kernel  scope link  src 192.168.198.1
+#192.168.42.0/24 dev usb0  proto kernel  scope link  src 192.168.42.73  metric 1
+#192.168.0.0/21 dev eth0  proto kernel  scope link  src 192.168.4.146  metric 1
+#169.254.0.0/16 dev eth0  scope link  metric 1000
+#default via 192.168.1.1 dev eth0  proto static
+
+
+
+#lo       UP    127.0.0.1       255.0.0.0       0x00000049
+#dummy0   DOWN  0.0.0.0         0.0.0.0         0x00000082
+#ifb0     DOWN  0.0.0.0         0.0.0.0         0x00000082
+#ifb1     DOWN  0.0.0.0         0.0.0.0         0x00000082
+#rmnet0   DOWN  0.0.0.0         0.0.0.0         0x00001002
+#rmnet1   DOWN  0.0.0.0         0.0.0.0         0x00001002
+#rmnet2   DOWN  0.0.0.0         0.0.0.0         0x00001002
+#usb0     UP    192.168.42.129  255.255.255.0   0x00001043
+#tiwlan0  UP    192.168.1.113   255.255.255.0   0x00001043
+
+
+########################################################################
+
