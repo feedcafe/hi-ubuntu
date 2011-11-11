@@ -105,20 +105,6 @@ fi
 export PATH=$PATH:~/.usr/bin:/opt/mips-4.3/bin
 export PATH=$PATH:/usr/local/arm/4.3.2/bin
 export PATH=$PATH:~/froyo/prebuilt/linux-x86/toolchain/mips-4.4.3/bin
-if false 
-then
-export JAVA_HOME=/usr/lib/jvm/java-1.5.0-sun
-export PATH=$JAVA_HOME/bin:$JAVA_HOME/jre/bin:$PATH
-export CLASSPATH=$CLASSPATH:.:$JAVA_HOME/lib:$JAVA_HOME/jre/lib
-fi
-
-
-
-PATH="/usr/lib/jvm/java-6-sun/bin:$PATH"  
-CLASSPATH="/usr/lib/jvm/java-6-sun/lib"  
-JAVA_HOME="/usr/lib/jvm/java-6-sun"
-export PATH=$PATH:/opt/android-sdk-linux/tools
-
 
 
 export TARGET_PHONE_TYPE=GG
