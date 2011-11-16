@@ -106,6 +106,9 @@ sudo apt-get install dfu-util
 
 sudo apt-get install stardict
 
+# make pdfdocs
+#sudo apt-get install docbook-utils -y --force-yes
+
 # replace openoffice with libreoffice
 #sudo apt-get purge "openoffice*.*"
 #sudo add-apt-repository ppa:libreoffice/ppa
