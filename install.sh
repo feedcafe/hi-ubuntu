@@ -10,6 +10,7 @@ sudo apt-get install openfetion -y --force-yes
 
 sudo apt-get install sun-java6-jdk -y
 
+sudo apt-get install vim-gnome vim -y --force-yes
 sudo apt-get install human-theme
 sudo apt-get install nautilus-open-terminal -y --force-yes
 sudo apt-get install leafpad -y --force-yes
@@ -109,30 +110,15 @@ sudo apt-get install stardict
 # make pdfdocs
 #sudo apt-get install docbook-utils -y --force-yes
 
-# replace openoffice with libreoffice
-#sudo apt-get purge "openoffice*.*"
-#sudo add-apt-repository ppa:libreoffice/ppa
-#sudo apt-get update
-#sudo apt-get remove --purge openoffice*.*
-#sudo apt-get install libreoffice
-#sudo apt-get install libreoffice-gnome
-
 #sudo apt-get install amule-gnome-support
 
 #sudo apt-get install xchm
 #not good
 #Error loading CHM file!
 
-#hex editor
-#sudo apt-get install ghex
-
 #sudo apt-get install meld
 
-#svn import svn://192.168.1.87/mips/kernel/linux-2.6.32.9/branches/mmc/ -m "create mmc branch for z800"
 #sudo apt-get install numlockx 
-#sudo tar xjvf android-toolchain-mipsel-linux-4.2.1-new.tar.bz2 -C /
-
-#sudo mkdir src/kernel/ src/u-boot -p
 
 #how to remove a package
 #sudo apt-get install hexcurse-
@@ -141,15 +127,6 @@ sudo apt-get install stardict
 #sudo apt-get install emesene
 #sudo apt-get install eva
 
-# feige
-# sudo apt-get install iptux -y --force-yes
 
-# sudo add-apt-repository "deb http://cz.archive.ubuntu.com/ubuntu dapper main multiverse"
-# sudo apt-get install vim-gnome vim -y --force-yes
-# sudo apt-get install sun-java5-jdk
 # sudo apt-get install recordmydesktop gtk-recordmydesktop 
 # sudo apt-get install xvidcap istanbul -y
-
-# firefox cache directory
-# /home/fdbai/.mozilla/firefox/n87lqakk.default/Cache
-
