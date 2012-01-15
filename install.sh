@@ -24,6 +24,9 @@ sudo apt-get install gnome-device-manager -y
 
 # Chromium, fast and best browser
 sudo apt-get install chromium-browser -y
+# flash plugin
+sudo apt-get install adobe-flashplugin -y
+
 
 # ime
 sudo apt-get install ibus ibus-pinyin ibus-table-wubi -y
@@ -90,10 +93,6 @@ sudo apt-get install chmsee -y --force-yes
 sudo apt-get install poppler-data
 
 sudo apt-get install flashgot -y
-
-# firefox flash plugin
-sudo apt-get install flashplugin-installer
-
 
 wget -c http://files.zentus.com/sqlitejdbc/sqlitejdbc-v056.jar
 sudo cp ~/sqlitejdbc-v056.jar /usr/share/java
