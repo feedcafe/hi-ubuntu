@@ -42,4 +42,7 @@ sudo ip route change to default dev wlan0 via 192.168.1.1
 
 
 ########################################################################
+# http://linuxcommand.org/man_pages/mkisofs8.html
+# how to make iso
+mkisofs -r -o sample.iso test/
 
