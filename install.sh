@@ -98,7 +98,7 @@ wget -c http://files.zentus.com/sqlitejdbc/sqlitejdbc-v056.jar
 sudo cp ~/sqlitejdbc-v056.jar /usr/share/java
 
 # beyound compare
-sudo dpkg -i /opt/software/ubuntu/bcompare/bcompare-3.2.4.13298_i386.deb
+sudo gdebi /opt/software/ubuntu/bcompare/bcompare-3.3.3.14128_i386.deb
 
 # for freerunner
 sudo apt-get install openocd -y
