@@ -1,3 +1,5 @@
+sudo add-apt-repository "deb file:///cdrom/ lucid main"
+
 # /etc/apt/sources.list
 # for sun-java6-jdk
 sudo add-apt-repository "deb http://archive.canonical.com/ubuntu maverick partner"
@@ -16,6 +18,8 @@ sudo apt-get install nautilus-open-terminal -y --force-yes
 sudo apt-get install leafpad -y --force-yes
 sudo apt-get install rar unrar tree -y --force-yes
 sudo apt-get install p7zip-full
+
+sudo apt-get install gcolor2
 
 # mgp file, MagicPoint, an X11 based presentation tool(like powerpoint)
 sudo apt-get install mgp -y
@@ -36,8 +40,7 @@ sudo apt-get install g2ipmsg -y --force-yes
 
 # usbboot
 sudo apt-get install libtool -y --force-yes
-sudo apt-get install libconfuse0
-sudo apt-get install libconfuse-dev
+sudo apt-get install libconfuse0 libconfuse-dev
 sudo apt-get install libusb-dev -y --force-yes
 sudo apt-get install libusb-1.0-0-dev
 
@@ -55,6 +58,7 @@ sudo apt-get install gstreamer0.10-plugins-ugly -y
 
 sudo apt-get install ctags #cscope
 sudo apt-get install git-core -y --force-yes
+sudo apt-get install git-email -y
 sudo apt-get install subversion -y --force-yes
 sudo apt-get install mercurial -y
 
@@ -71,10 +75,9 @@ sudo apt-get install system-config-samba -y
 # that needed by android
 
 sudo apt-get install g++ -y
-sudo apt-get install bison flex
+sudo apt-get install bison flex gperf
 sudo apt-get install zlib1g-dev libssl-dev -y --force-yes
 sudo apt-get install libx11-dev -y --force-yes
-sudo apt-get install gperf
 sudo apt-get install nfs-kernel-server -y --force-yes
 sudo apt-get install libglib2.0-dev -y --force-yes
 sudo apt-get install ant1.8 -y
@@ -101,10 +104,12 @@ sudo cp ~/sqlitejdbc-v056.jar /usr/share/java
 sudo gdebi /opt/software/ubuntu/bcompare/bcompare-3.3.3.14128_i386.deb
 
 # for freerunner
-sudo apt-get install openocd -y
 sudo apt-get install dfu-util
 
 sudo apt-get install stardict
+
+# version 0.3 has issue, install from source
+# sudo apt-get install openocd -y
 
 # make pdfdocs
 #sudo apt-get install docbook-utils -y --force-yes
@@ -122,10 +127,7 @@ sudo apt-get install stardict
 #how to remove a package
 #sudo apt-get install hexcurse-
 
-#sudo apt-get install amsn
-#sudo apt-get install emesene
-#sudo apt-get install eva
-
+#sudo apt-get install amsn emesene eva
 
 # sudo apt-get install recordmydesktop gtk-recordmydesktop 
 # sudo apt-get install xvidcap istanbul -y
