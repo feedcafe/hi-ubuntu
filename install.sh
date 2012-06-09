@@ -108,6 +108,9 @@ sudo apt-get install dfu-util
 
 sudo apt-get install stardict
 
+# used for limit bandwidth
+sudo apt-get install wondershaper -y --force-yes
+
 # version 0.3 has issue, install from source
 # sudo apt-get install openocd -y
 
