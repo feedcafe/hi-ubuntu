@@ -49,3 +49,11 @@ mkisofs -r -o sample.iso test/
 ########################################################################
 # top info to text file
 top -b -d 1 p 1100 >>info.txt
+
+
+
+########################################################################
+# limit bandwidth(down: 200 KB, up: 100KB)
+sudo wondershaper wlan0 200 100
+
+
