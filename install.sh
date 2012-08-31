@@ -82,4 +82,5 @@ sudo apt-get install gstreamer0.10-plugins-ugly -y
 sudo apt-get install poppler-data
 
 
-
+# Enable Always use location entry in Ubuntu 12.04
+gsettings set org.gnome.nautilus.preferences always-use-location-entry true
