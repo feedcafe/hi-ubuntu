@@ -37,6 +37,11 @@ sudo apt-get install gcc-4.4 -y
 sudo rm /usr/bin/gcc
 sudo ln -s /usr/bin/gcc-4.4 /usr/bin/gcc
 
+sudo apt-get install g++-4.4 -y
+sudo rm /usr/bin/g++
+sudo ln -s /usr/bin/g++-4.4 /usr/bin/g++
+
+
 # libgmp.so.3 Cannot open shared object file
 sudo apt-get install libgmp3c2
 
