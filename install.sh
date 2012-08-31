@@ -45,6 +45,8 @@ sudo ln -s /usr/bin/g++-4.4 /usr/bin/g++
 # libgmp.so.3 Cannot open shared object file
 sudo apt-get install libgmp3c2
 
+# get repo
+sudo apt-get install curl
 
 # lndir
 sudo apt-get install xutils-dev
