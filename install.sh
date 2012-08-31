@@ -31,12 +31,19 @@ sudo apt-get install g++ -y
 sudo apt-get install bison flex gperf -y
 sudo apt-get install zlib1g-dev libssl-dev -y
 sudo apt-get install libglib2.0-dev -y
+
+# fix build ics on precise
+sudo apt-get install gcc-4.4 -y
+sudo rm /usr/bin/gcc
+sudo ln -s /usr/bin/gcc-4.4 /usr/bin/gcc
+
+
 # lndir
 sudo apt-get install xutils-dev
 
 
-# other
 
+# other
 sudo apt-get install leafpad -y
 sudo apt-get install nautilus-open-terminal -y
 
