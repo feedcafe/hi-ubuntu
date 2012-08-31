@@ -37,6 +37,9 @@ sudo apt-get install gcc-4.4 -y
 sudo rm /usr/bin/gcc
 sudo ln -s /usr/bin/gcc-4.4 /usr/bin/gcc
 
+# libgmp.so.3 Cannot open shared object file
+sudo apt-get install libgmp3c2
+
 
 # lndir
 sudo apt-get install xutils-dev
