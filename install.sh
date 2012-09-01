@@ -2,7 +2,6 @@
 # Current version is for Ubuntu 12.04 (Precise Pangolin)
 
 # version control
-
 sudo apt-get install git-core -y
 sudo apt-get install git-email -y
 sudo apt-get install subversion -y
@@ -24,6 +23,8 @@ sudo apt-get install chmsee -y
 sudo apt-get install rar unrar tree -y
 sudo apt-get install p7zip-full
 
+# beyound compare
+sudo gdebi /opt/software/ubuntu/bcompare/bcompare-3.3.5.15075_i386.deb
 
 
 # android stuff
@@ -40,6 +41,13 @@ sudo ln -s /usr/bin/gcc-4.4 /usr/bin/gcc
 sudo apt-get install g++-4.4 -y
 sudo rm /usr/bin/g++
 sudo ln -s /usr/bin/g++-4.4 /usr/bin/g++
+
+# sun jdk
+sudo ./jdk-6u32-linux-i586.bin
+sudo mv jdk1.6.0_32/ /usr/lib/jvm/
+sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk1.6.0_32/bin/java 87
+sudo update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/jdk1.6.0_32/bin/javac 87
+# sudo update-alternatives --config java
 
 
 # libgmp.so.3 Cannot open shared object file
@@ -58,6 +66,11 @@ sudo apt-get install leafpad -y
 sudo apt-get install nautilus-open-terminal -y
 
 sudo apt-get install vim-gnome -y
+
+sudo apt-get install gawk -y
+sudo apt-get install procmail -y
+
+sudo apt-get install uuid-dev
 
 
 # internet
