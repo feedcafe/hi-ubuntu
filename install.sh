@@ -42,6 +42,10 @@ sudo apt-get install g++-4.4 -y
 sudo rm /usr/bin/g++
 sudo ln -s /usr/bin/g++-4.4 /usr/bin/g++
 
+file /bin/sh
+sudo rm /bin/sh
+sudo ln -s /bin/bash /bin/sh
+
 # sun jdk
 sudo ./jdk-6u32-linux-i586.bin
 sudo mv jdk1.6.0_32/ /usr/lib/jvm/
