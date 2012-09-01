@@ -1,4 +1,0 @@
-#adb -s 'Jz4760' forward tcp:41927 tcp:41927
-adb forward tcp:41927 tcp:41927
-openvpn --config /home/fdbai/.usr/etc/openvpn/azilink.ovpn&
-echo 'nameserver 192.168.56.1' >> /etc/resolv.conf
