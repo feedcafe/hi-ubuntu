@@ -62,7 +62,8 @@ sudo apt-get install vim-gnome -y
 
 # internet
 sudo apt-get install openfetion -y
-
+# Chromium, fast and best browser
+sudo apt-get install chromium-browser -y
 
 
 # tftp
