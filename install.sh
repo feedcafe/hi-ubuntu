@@ -77,6 +77,11 @@ sudo apt-get install procmail -y
 sudo apt-get install uuid-dev
 
 
+# qtqq
+sudo apt-get install libnotify-dev -y
+sudo apt-get install libgtk2.0-dev -y
+
+
 # internet
 sudo apt-get install openfetion -y
 # Chromium, fast and best browser
