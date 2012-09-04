@@ -87,6 +87,7 @@ sudo apt-get install openfetion -y
 # Chromium, fast and best browser
 sudo apt-get install chromium-browser -y
 
+sudo apt-get install adobe-flashplugin
 
 # tftp
 sudo mkdir /tftpboot
