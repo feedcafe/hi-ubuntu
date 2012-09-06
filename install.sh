@@ -63,7 +63,9 @@ sudo apt-get install curl
 # lndir
 sudo apt-get install xutils-dev
 
-
+# libusb
+sudo apt-get install libusb-dev
+sudo apt-get install libusb-1.0-0-dev
 
 # other
 sudo apt-get install leafpad -y
