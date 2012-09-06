@@ -66,6 +66,7 @@ sudo apt-get install xutils-dev
 # libusb
 sudo apt-get install libusb-dev
 sudo apt-get install libusb-1.0-0-dev
+sudo apt-get install libtool -y
 
 # other
 sudo apt-get install leafpad -y
@@ -78,7 +79,6 @@ sudo apt-get install procmail -y
 
 sudo apt-get install uuid-dev
 
-sudo apt-get install libtool -y
 
 # qtqq
 sudo apt-get install libnotify-dev -y
