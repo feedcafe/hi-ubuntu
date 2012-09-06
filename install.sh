@@ -80,6 +80,7 @@ sudo apt-get install uuid-dev
 # qtqq
 sudo apt-get install libnotify-dev -y
 sudo apt-get install libgtk2.0-dev -y
+sudo apt-get install cmake
 
 
 # internet
