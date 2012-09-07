@@ -68,6 +68,11 @@ sudo apt-get install libusb-dev
 sudo apt-get install libusb-1.0-0-dev
 sudo apt-get install libtool -y
 
+
+# openocd
+sudo apt-get install openocd -y
+
+
 # other
 sudo apt-get install leafpad -y
 sudo apt-get install nautilus-open-terminal -y
