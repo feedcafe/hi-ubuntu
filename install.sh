@@ -130,3 +130,6 @@ sudo apt-get install poppler-data
 
 # Enable Always use location entry in Ubuntu 12.04
 gsettings set org.gnome.nautilus.preferences always-use-location-entry true
+
+apt-cache search linux-headers-$(uname -r)
+sudo apt-get install linux-headers-$(uname -r)
