@@ -16,6 +16,9 @@ sudo apt-get install libqt4-dev -y
 sudo apt-get install libncurses5-dev -y
 
 
+sudo apt-get install lzop -y
+
+
 # common utils
 sudo apt-get install ckermit automake -y
 sudo apt-get install ctags
