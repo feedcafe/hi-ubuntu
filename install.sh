@@ -77,6 +77,7 @@ sudo apt-get install openocd -y
 
 
 # other
+sudo apt-get install uboot-mkimage -y
 sudo apt-get install leafpad -y
 sudo apt-get install nautilus-open-terminal -y
 
