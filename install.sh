@@ -133,3 +133,11 @@ gsettings set org.gnome.nautilus.preferences always-use-location-entry true
 
 apt-cache search linux-headers-$(uname -r)
 sudo apt-get install linux-headers-$(uname -r)
+
+# wordpress
+sudo apt-get install wordpress -y
+sudo apt-get install mysql-server -y
+sudo ln -s /usr/share/wordpress /var/www/wordpress
+sudo chown -R www-data /usr/share/wordpress
+sudo bash /usr/share/doc/wordpress/examples/setup-mysql -n wordpress localhost
+sudo service apache2 restart
