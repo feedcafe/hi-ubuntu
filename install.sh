@@ -94,12 +94,19 @@ sudo apt-get install libgtk2.0-dev -y
 sudo apt-get install cmake
 
 
+
 # internet
 sudo apt-get install openfetion -y
+
 # Chromium, fast and best browser
 sudo apt-get install chromium-browser -y
 
+# file transfer(support SSH)
+sudo apt-get install filezilla -y
+
 sudo apt-get install adobe-flashplugin
+
+
 
 # tftp
 sudo mkdir /tftpboot
