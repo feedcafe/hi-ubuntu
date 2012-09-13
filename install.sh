@@ -109,16 +109,13 @@ sudo apt-get install adobe-flashplugin
 
 
 # tftp
+sudo apt-get install tftp tftpd openbsd-inetd -y
 sudo mkdir /tftpboot
 sudo chmod -R 777 /tftpboot
 sudo chown -R nobody /tftpboot
 # need to edit /etc/inetd.conf 
 # sudo /etc/init.d/openbsd-inetd restart
 sudo apt-get install openssh-server -y
-
-
-sudo apt-get install tftp tftpd openbsd-inetd -y
-
 
 
 # video
