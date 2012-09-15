@@ -1,2 +1,8 @@
+# udev rules for android adb
 ls -l /etc/udev/rules.d/51-android.rules
 rwxr-xr-x 1 root root 110 2012-01-12 11:05 /etc/udev/rules.d/51-android.rules
+
+
+
+# adb remount
+mount -o remount,rw -t ubifs /dev/block/mtdblock5 /system
