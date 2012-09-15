@@ -118,6 +118,13 @@ sudo chown -R nobody /tftpboot
 # sudo /etc/init.d/openbsd-inetd restart
 sudo apt-get install openssh-server -y
 
+# dhcp server
+sudo apt-get install dhcpd
+# sudo vi /etc/default/udhcpd
+# need to comment the following line
+# DHCPD_ENABLED="no"
+sudo service udhcpd restart
+
 
 # video
 sudo apt-get install mplayer -y
