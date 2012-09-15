@@ -1,0 +1,6 @@
+#!/bin/bash
+apk_list=`ls -A *.apk`
+for apk in $apk_list
+do
+	adb install $apk
+done
