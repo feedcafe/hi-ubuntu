@@ -1,7 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/home/fdbai/froyo/tcl/linux-2.6.32.9b/drivers/media/cmmb/innocmmb/core'
-let g:netrw_dirhist_2='/home/fdbai/froyo/tcl/linux-2.6.32.9b/drivers/media/cmmb/innocmmb/lgx'
-let g:netrw_dirhist_3='/home/fdbai/froyo/tcl/out/drivers/firmware'
-let g:netrw_dirhist_4='/home/fdbai/froyo/tcl/out/drivers'
-let g:netrw_dirhist_5='/home/fdbai/android-2.2/td-test/kernel/drivers'
