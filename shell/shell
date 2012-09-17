@@ -57,3 +57,8 @@ top -b -d 1 p 1100 >>info.txt
 sudo wondershaper wlan0 200 100
 
 
+
+########################################################################
+# stream video
+ffmpeg -an -f video4linux2 -s 640x480 -r 5 -b 200000 -i /dev/video0 test.avi
+
