@@ -25,6 +25,7 @@ sudo apt-get install ctags
 sudo apt-get install chmsee -y
 sudo apt-get install rar unrar tree -y
 sudo apt-get install p7zip-full
+sudo apt-get install ascii
 
 # beyound compare
 sudo gdebi /opt/software/ubuntu/bcompare/bcompare-3.3.5.15075_i386.deb
