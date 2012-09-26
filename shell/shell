@@ -87,3 +87,7 @@ scp .ssh/id_rsa.pub 192.168.0.87:/home/fdbai/.ssh/authorized_keys
 ########################################################################
 # build ko
 make -C /lib/modules/`uname -r`/build M=`pwd` modules
+
+########################################################################
+# using gvim edit files on server
+ssh -X fdbai@192.168.0.87
