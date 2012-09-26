@@ -95,3 +95,8 @@ ssh -X fdbai@192.168.0.87
 ########################################################################
 # Set Vi Mode in Bash
 set -o vi
+
+
+########################################################################
+# cp: -L, --dereference always follow symbolic links in SOURCE
+cp kernel test -frL
