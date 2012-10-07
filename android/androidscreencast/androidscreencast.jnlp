@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <jnlp spec="0.2 1.0"
-      codebase="http://androidscreencast.googlecode.com/svn/trunk/AndroidScreencast/dist/"
+      codebase=""
       href="androidscreencast.jnlp">
    <information>
       <title>Android Screencast</title>
