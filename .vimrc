@@ -144,7 +144,7 @@ vnoremap <silent> # :call VisualSearch('b')<CR>
 "Taglist key binding
 map <silent> <leader>tl :TlistToggle<cr> 
 "BTW what's the meaning of silent here
-nmap tt :Tlist<cr>
+nmap tl :Tlist<cr>
 
 "Quik close and save
 map <leader>q :q<cr>
