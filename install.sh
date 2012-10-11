@@ -57,9 +57,8 @@ sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk1.6.0_32/b
 sudo update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/jdk1.6.0_32/bin/javac 87
 # sudo update-alternatives --config java
 
-# grant access to /dev/ttyS0, needs reboot
-sudo adduser fdbai dialout
-
+# grant access to /dev/ttyS0 (and friends), needs reboot
+sudo adduser `whoami` dialout
 
 # libgmp.so.3 Cannot open shared object file
 sudo apt-get install libgmp3c2
