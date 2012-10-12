@@ -120,7 +120,7 @@ sudo apt-get install tnef
 sudo apt-get install convmv
 
 # convert filename encoding
-# convmv  -f gbk -t utf8 --notest *.docx
+# convmv -f gbk -t utf8 --notest *.docx
 
 
 # tftp
@@ -148,7 +148,6 @@ sudo service udhcpd restart
 
 # video
 sudo apt-get install mplayer -y
-
 sudo apt-get install smplayer -y
 
 sudo apt-get install gstreamer0.10-ffmpeg gstreamer0.10-plugins-bad -y
