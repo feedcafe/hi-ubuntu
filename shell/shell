@@ -100,3 +100,8 @@ set -o vi
 ########################################################################
 # cp: -L, --dereference always follow symbolic links in SOURCE
 cp kernel test -frL
+
+
+########################################################################
+# set mac address
+ifconfig eth0 hw ether 001986060757
