@@ -111,6 +111,17 @@ sudo apt-get install filezilla -y
 sudo apt-get install adobe-flashplugin
 
 
+# fix thunderbird winmail.dat issue
+sudo apt-get install tnef
+
+# extract attachment
+# tnef winmail.dat
+
+sudo apt-get install convmv
+
+# convert filename encoding
+# convmv  -f gbk -t utf8 --notest *.docx
+
 
 # tftp
 sudo apt-get install tftp tftpd openbsd-inetd -y
