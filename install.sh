@@ -47,8 +47,7 @@ sudo rm /usr/bin/g++
 sudo ln -s /usr/bin/g++-4.4 /usr/bin/g++
 
 file /bin/sh
-sudo rm /bin/sh
-sudo ln -s /bin/bash /bin/sh
+sudo ln -fs /bin/bash /bin/sh
 
 # sun jdk
 sudo ./jdk-6u32-linux-i586.bin
