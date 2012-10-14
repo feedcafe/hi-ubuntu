@@ -110,3 +110,6 @@ ifconfig eth0 hw ether 001986060757
 ########################################################################
 # mount nfs
 sudo mount -t nfs 192.168.1.57:/opt/nfsroot nfs/
+
+# mount iso
+mount -t iso9660 ~/precise/ubuntu-12.04.1-dvd-i386.iso /media/cdrom/ -o loop
