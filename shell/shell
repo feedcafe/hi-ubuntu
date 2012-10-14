@@ -113,3 +113,6 @@ sudo mount -t nfs 192.168.1.57:/opt/nfsroot nfs/
 
 # mount iso
 mount -t iso9660 ~/precise/ubuntu-12.04.1-dvd-i386.iso /media/cdrom/ -o loop
+
+# mount vfat partition
+mount -t vfat /dev/sda6 /tmp/
