@@ -11,3 +11,7 @@ mount -o remount,rw -t ubifs /dev/block/mtdblock5 /system
 # unpack and pack ramdisk
 gunzip -c ../ramdisk.img | cpio -i
 fdbai@fdbai-laptop:~/root/tmp$ find . | cpio -o -H newc | gzip > ../ramdisk-new.img
+
+
+# start an activity
+am start -n com.android.development/.PointerLocation
