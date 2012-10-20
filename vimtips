@@ -1005,3 +1005,11 @@ E257: cstag: tag not found
 
 :cs kill 0
 :cs add cscope.out
+
+
+
+
+:qa
+:qa!
+:wqa
+close all tabs
