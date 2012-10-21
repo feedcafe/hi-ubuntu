@@ -154,6 +154,10 @@ sudo apt-get install gstreamer0.10-ffmpeg gstreamer0.10-plugins-bad -y
 sudo apt-get install gstreamer0.10-plugins-ugly -y
 
 
+# Schedule alarms/reminders easily from an indicator
+sudo apt-get install indicator-remindor
+
+
 # to fix evince parsing Chinese issue
 sudo apt-get install poppler-data
 
