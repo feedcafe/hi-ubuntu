@@ -1,0 +1,25 @@
+1. install miredo, Teredo IPv6 tunneling software
+sudo apt-get install miredo
+
+2. Put one of the following address to file /etc/miredo.conf
+# ServerAddress teredo.remlab.net
+# ServerAddress teredo-debian.remlab.net
+# ServerAddress teredo.autotrans.consulintel.com
+# ServerAddress teredo.ngix.ne.kr
+# ServerAddress teredo.managemydedi.com
+NOTE: only one ServerAddress is allowed, the default one should be working
+      if not, try another one
+
+3. Restart miredo service
+sudo service miredo restart
+
+4. Keep you /etc/hosts update with https://ipv6-hosts.googlecode.com/hg/hosts
+
+5. restart network
+sudo invoke-rc.d networking restart
+
+6. If http://ipv6.google.com.hk works, you're done
+
+Ubuntu enabled IPv6 by default, set IPV6 to yes in /etc/default/ufw if
+using other distributions
+
