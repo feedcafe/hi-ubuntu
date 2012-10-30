@@ -144,6 +144,8 @@ sudo apt-get install dhcpd
 # DHCPD_ENABLED="no"
 sudo service udhcpd restart
 
+# Teredo IPv6 tunneling software for Ubuntu
+sudo apt-get install miredo
 
 # video
 sudo apt-get install mplayer -y
