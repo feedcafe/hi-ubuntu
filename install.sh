@@ -99,7 +99,6 @@ sudo apt-get install cmake
 
 
 # internet
-sudo apt-get install openfetion -y
 
 # Chromium, fast and best browser
 sudo apt-get install chromium-browser -y
