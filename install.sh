@@ -154,6 +154,10 @@ sudo apt-get install gstreamer0.10-ffmpeg gstreamer0.10-plugins-bad -y
 # for asf files
 sudo apt-get install gstreamer0.10-plugins-ugly -y
 
+# Download youtube video
+sudo apt-get install youtube-dl
+# update to latest version
+sudo youtube-dl -U
 
 # Schedule alarms/reminders easily from an indicator
 sudo apt-get install indicator-remindor
