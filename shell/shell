@@ -128,3 +128,8 @@ mknod -m 660 console c 5 1
 # i686 if 32-bit
 # x86_64 if 64-bit
 uname -m
+
+
+########################################################################
+# Where can I find my Wired connection configuration
+sudo vi /etc/NetworkManager/system-connections/Wired\ connection\ 1
