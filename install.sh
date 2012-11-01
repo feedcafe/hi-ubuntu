@@ -14,7 +14,8 @@ sudo apt-get install libqt4-dev -y
 
 # make menuconfig need this
 sudo apt-get install libncurses5-dev -y
-
+# a front end reader of trace-cmd output
+sudo apt-get install kernelshark -y
 
 sudo apt-get install lzop -y
 
