@@ -91,6 +91,9 @@ sudo apt-get install procmail -y
 
 sudo apt-get install uuid-dev
 
+# PRemoteDroid-Server needs libbluetooth
+sudo apt-get install libbluetooth-dev -y
+
 
 # qtqq
 sudo apt-get install libnotify-dev -y
