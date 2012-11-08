@@ -39,13 +39,9 @@ sudo apt-get install zlib1g-dev libssl-dev -y
 sudo apt-get install libglib2.0-dev -y
 
 # fix build ics on precise
-sudo apt-get install gcc-4.4 -y
-sudo rm /usr/bin/gcc
-sudo ln -s /usr/bin/gcc-4.4 /usr/bin/gcc
-
-sudo apt-get install g++-4.4 -y
-sudo rm /usr/bin/g++
-sudo ln -s /usr/bin/g++-4.4 /usr/bin/g++
+sudo apt-get install gcc-4.4 g++-4.4 -y
+sudo ln -fs /usr/bin/gcc-4.4 /usr/bin/gcc
+sudo ln -fs /usr/bin/g++-4.4 /usr/bin/g++
 
 file /bin/sh
 sudo ln -fs /bin/bash /bin/sh
