@@ -86,12 +86,6 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-alias lt='ls -ltr'
-alias v='vim -p'
-alias vi='vim -p'
-
-alias cu='kermit -c'
-
 # Set Vi Mode in Bash
 set -o vi
 
