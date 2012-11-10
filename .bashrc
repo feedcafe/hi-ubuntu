@@ -109,7 +109,9 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-export PATH=$PATH:/usr/local/arm/4.3.2/bin
 
 export PATH=$PATH:/usr/lib/jvm/jdk1.6.0_32/bin
 export JAVA_HOME=/usr/lib/jvm/jdk1.6.0_32/bin
+
+export PATH=$PATH:/usr/local/arm/4.3.2/bin
+export PATH=$PATH:/opt/android/android-sdk-linux/tools/
