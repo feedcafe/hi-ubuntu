@@ -1,8 +1,13 @@
 #!/bin/bash
 
-x=1
+x=7
 
 while [ $x -le 1 ]
 do
 	echo 'hello'	
+done
+
+while true
+do
+	echo 'hello world'
 done
