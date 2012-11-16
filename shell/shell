@@ -1,12 +1,13 @@
 ########################################################################
 # delete empty directory
 find . -type d -empty -exec rmdir {} \;
+find . -type d -empty | xargs rmdir
 
 
 ########################################################################
 # patch kernel
-fdbai@fdbai-desktop:~/$ cd linux-2.6.31.3/
-fdbai@fdbai-desktop:~/linux-2.6.31.3$ patch -p1 < ../jz/linux-2.6.31.3-release-20110719.patch
+fdbai@fdbai-desktop:~/$ cd linux-3.4.0/
+fdbai@fdbai-desktop:~/linux-3.4.0$ patch -p1 < ../patch-for-mini2440.patch
 
 
 ########################################################################
