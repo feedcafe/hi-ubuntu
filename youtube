@@ -22,4 +22,3 @@ sudo invoke-rc.d networking restart
 
 Ubuntu enabled IPv6 by default, set IPV6 to yes in /etc/default/ufw if
 using other distributions
-
