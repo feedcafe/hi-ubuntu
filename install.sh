@@ -134,6 +134,9 @@ sudo apt-get install convmv
 # convert filename encoding
 # convmv -f gbk -t utf8 --notest *.docx
 
+# ime
+sudo apt-get install ibus ibus-pinyin ibus-table-wubi -y
+
 
 # tftp
 sudo apt-get install tftp tftpd openbsd-inetd -y
