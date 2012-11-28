@@ -1,0 +1,80 @@
+#!/bin/bash
+
+# tested on Ubuntu 12.04 i386 version
+
+# installing mandatory packages
+sudo apt-get install git-core -y
+sudo apt-get install gcc g++ ant build-essential -y
+
+# sudo apt-get install python-setuptools
+sudo apt-get install python-dev -y
+sudo apt-get install memcached
+
+
+sudo apt-get install apache2 libapache2-mod-wsgi -y
+sudo apt-get install mysql-server -y
+sudo apt-get install python-pip -y
+sudo apt-get install python-mysqldb -y
+
+
+# sudo apt-get install subversion python-svn
+
+# some optional packages
+sudo apt-get install chromium-browser -y
+sudo apt-get install vim-gnome -y
+sudo apt-get install pylucene
+sudo apt-get install python-rbtools
+
+
+sudo easy_install -U setuptools
+sudo easy_install python-memcached
+sudo easy_install ReviewBoard
+sudo easy_install django-storages
+sudo easy_install nose Sphinx
+sudo easy_install ReviewBoard
+
+
+# mysql privileged user name and password
+USERNAME="root"
+PASSWORD="mysql"
+
+DBNAME="reviewboard"
+
+# user name and password used for test
+RBNAME="rb"
+RBPASSWD="reviewboard"
+
+# create reviewboard database
+create_db_sql="create database IF NOT EXISTS ${DBNAME}"
+
+create_user_sql="create user ${RBNAME}@'localhost' IDENTIFIED BY '${RBPASSWD}'"
+
+mysql -u ${USERNAME} -p${PASSWORD} -e "${create_db_sql}"
+
+# create reviewboard user and grant access to the database created above
+mysql -u ${USERNAME} -p${PASSWORD} -e "${create_user_sql}"
+
+
+# grant access right to new user
+grant_user_access="grant all privileges on ${DBNAME}.* to ${RBNAME}@localhost"
+mysql -u ${USERNAME} -p${PASSWORD} -e "${grant_user_access}"
+
+
+# configure apache server
+HOSTNAME="192.168.2.22"
+# issue the following command will guide you the rest of setup routine
+sudo rb-site install /var/www/${HOSTNAME}
+
+sudo chown -R www-data /var/www/${HOSTNAME}/htdocs/media/uploaded/
+sudo chown -R www-data /var/www/${HOSTNAME}/data/
+cd /var/www/${HOSTNAME}
+sudo cp conf/apache-wsgi.conf /etc/apache2/sites-available/${HOSTNAME}.conf
+
+sudo ln -fs /etc/apache2/sites-available/${HOSTNAME}.conf /etc/apache2/sites-enabled/
+sudo rm /etc/apache2/sites-enabled/000-default
+
+sudo chmod 777 /usr/local/lib/python2.7/dist-packages/feedparser-5.1.2-py2.7.egg/EGG-INFO/top_level.txt
+
+# restart service and test, you could visit the following URL now
+# http://192.168.2.22
+sudo service apache2 restart
