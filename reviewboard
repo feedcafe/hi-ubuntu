@@ -78,3 +78,11 @@ sudo chmod 777 /usr/local/lib/python2.7/dist-packages/feedparser-5.1.2-py2.7.egg
 # restart service and test, you could visit the following URL now
 # http://192.168.2.22
 sudo service apache2 restart
+
+
+# using reviewboard with git
+# first add your git repository to reviewboard through:
+# http://192.168.2.22/admin/db/scmtools/repository/
+# then
+# cd to your local repository and do the following:
+# git config reviewboard.url http://192.168.2.22/reviewboard-test
