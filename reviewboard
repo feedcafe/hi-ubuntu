@@ -15,7 +15,7 @@ sudo apt-get install apache2 libapache2-mod-wsgi -y
 sudo apt-get install mysql-server -y
 sudo apt-get install python-pip -y
 sudo apt-get install python-mysqldb -y
-
+sudo easy_install virtualenv
 
 # sudo apt-get install subversion python-svn
 
@@ -25,13 +25,17 @@ sudo apt-get install vim-gnome -y
 sudo apt-get install pylucene
 sudo apt-get install python-rbtools
 
+mkdir ~/envs/reviewboard/ -p
 
-sudo easy_install -U setuptools
-sudo easy_install python-memcached
-sudo easy_install ReviewBoard
-sudo easy_install django-storages
-sudo easy_install nose Sphinx
-sudo easy_install ReviewBoard
+virtualenv ~/envs/reviewboard
+source ~/envs/reviewboard/bin/activate
+
+easy_install -U setuptools
+easy_install python-memcached
+easy_install ReviewBoard
+easy_install django-storages
+easy_install nose Sphinx
+easy_install ReviewBoard
 
 
 # mysql privileged user name and password
@@ -61,7 +65,7 @@ mysql -u ${USERNAME} -p${PASSWORD} -e "${grant_user_access}"
 
 
 # configure apache server
-HOSTNAME="192.168.2.22"
+HOSTNAME="192.168.2.23"
 # issue the following command will guide you the rest of setup routine
 sudo rb-site install /var/www/${HOSTNAME}
 
@@ -72,8 +76,6 @@ sudo cp conf/apache-wsgi.conf /etc/apache2/sites-available/${HOSTNAME}.conf
 
 sudo ln -fs /etc/apache2/sites-available/${HOSTNAME}.conf /etc/apache2/sites-enabled/
 sudo rm /etc/apache2/sites-enabled/000-default
-
-sudo chmod 777 /usr/local/lib/python2.7/dist-packages/feedparser-5.1.2-py2.7.egg/EGG-INFO/top_level.txt
 
 # restart service and test, you could visit the following URL now
 # http://192.168.2.22
