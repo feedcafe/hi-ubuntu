@@ -92,13 +92,6 @@ sudo apt-get install uuid-dev
 sudo apt-get install libbluetooth-dev -y
 
 
-# qtqq
-sudo apt-get install libnotify-dev -y
-sudo apt-get install libgtk2.0-dev -y
-sudo apt-get install cmake
-
-
-
 # internet
 
 # Chromium, fast and best browser
