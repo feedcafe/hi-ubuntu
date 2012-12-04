@@ -101,20 +101,6 @@ sudo apt-get install cmake
 
 # internet
 
-# QQ
-sudo apt-get install pidgin -y
-
-# required by libqq
-sudo apt-get install libpurple-dev -y
-
-# check out libqq source code
-# svn checkout http://libqq-pidgin.googlecode.com/svn/trunk/ libqq-pidgin-read-only
-# ./autogen.sh
-# autoreconf
-# ./configure
-# make install or
-# sudo cp libqq-pidgin-read-only/.libs/libqq.so /usr/lib/purple-2/
-
 # Chromium, fast and best browser
 sudo apt-get install chromium-browser -y
 
