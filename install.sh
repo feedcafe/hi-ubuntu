@@ -102,6 +102,7 @@ sudo apt-get install filezilla -y
 
 sudo apt-get install adobe-flashplugin
 
+sudo apt-get install skype -y
 
 # fix thunderbird winmail.dat issue
 sudo apt-get install tnef
