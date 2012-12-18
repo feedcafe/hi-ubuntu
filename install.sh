@@ -91,6 +91,7 @@ sudo apt-get install uuid-dev
 # PRemoteDroid-Server needs libbluetooth
 sudo apt-get install libbluetooth-dev -y
 
+sudo apt-get install blueman
 
 # internet
 
