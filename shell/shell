@@ -18,7 +18,7 @@ diff -ruNp --exclude-from Documentation/dontdiff a b >patch
 # connect to internet through usb0 when using usb tethering
 # visit intranet through eth0
 sudo ip route change to default dev usb0 via 192.168.42.129
-sudo ip route change to default dev wlan0 via 192.168.0.1
+sudo ip route change to default dev wlan0 via 192.168.1.1
 
 
 #fdbai@fdbai-desktop:~$ ip route list
