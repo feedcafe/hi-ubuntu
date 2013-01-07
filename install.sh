@@ -92,6 +92,7 @@ sudo apt-get install uuid-dev
 sudo apt-get install libbluetooth-dev -y
 
 sudo apt-get install blueman
+sudo apt-get install bluez-hcidump
 
 # internet
 
