@@ -4,6 +4,7 @@
 # version control
 sudo apt-get install git-core -y
 sudo apt-get install git-email -y
+sudo apt-get install gitk -y
 sudo apt-get install subversion -y
 
 
