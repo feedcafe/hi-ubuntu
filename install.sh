@@ -29,6 +29,7 @@ sudo apt-get install rar unrar tree -y
 sudo apt-get install p7zip-full
 sudo apt-get install ascii
 sudo apt-get install dos2unix
+sudo apt-get install bless	# a hex editor
 
 # beyound compare
 sudo gdebi /opt/software/ubuntu/bcompare/bcompare-3.3.5.15075_i386.deb
