@@ -120,6 +120,8 @@ sudo apt-get install convmv
 # convert filename encoding
 # convmv -f gbk -t utf8 --notest *.docx
 
+convmv -r -f utf8 -t iso88591 *.mp3 --notest --nosmart && convmv -r -f gbk -t utf8 *.mp3 --notest --nosmart
+
 # ime
 sudo apt-get install ibus ibus-pinyin ibus-table-wubi -y
 
