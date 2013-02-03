@@ -1,0 +1,8 @@
+
+[Default Applications]
+text/plain=leafpad.desktop
+audio/mpeg=smplayer_enqueue.desktop
+
+[Added Associations]
+text/plain=gvim.desktop;leafpad.desktop;
+audio/mpeg=smplayer_enqueue.desktop;
