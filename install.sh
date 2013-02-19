@@ -186,3 +186,8 @@ sudo ln -s /usr/share/wordpress /var/www/wordpress
 sudo chown -R www-data /usr/share/wordpress
 sudo bash /usr/share/doc/wordpress/examples/setup-mysql -n wordpress localhost
 sudo service apache2 restart
+
+# FreetuxTV
+sudo apt-get install intltool libcurl4-openssl-dev -y
+sudo apt-get install libvlc-dev libgtk2.0-dev libdbus-glib-1-dev -y
+sudo apt-get install libnotify-dev libsqlite3-dev -y
