@@ -140,3 +140,5 @@ sudo vi /etc/NetworkManager/system-connections/Wired\ connection\ 1
 # Get md5sum and cut off the filename
 md5sum $filename | cut -d " " -f1
 md5sum $filename | cut --delimiter=" " -f1
+
+kill -9 `pidof adbd`
