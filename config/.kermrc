@@ -10,3 +10,8 @@ set file name lit
 set rec pack 1000
 set send pack 1000
 set window 5
+
+.log_dir := ~/logs/
+cd \m(log_dir)
+set session-log timestamped
+log session \v(ndate)-\v(time).log
