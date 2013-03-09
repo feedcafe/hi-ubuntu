@@ -1,0 +1,32 @@
+#!/system/bin/sh
+
+LOG_DIR=/data/data/
+
+while true
+do
+	# send keyevent via Inafra-Red
+	sendevent /dev/input/event0 1 28 1
+	sendevent /dev/input/event0 0 0 0
+	sendevent /dev/input/event0 1 28 0
+	sendevent /dev/input/event0 0 0 0
+
+	hciconfig hci0|grep RUNNING
+	while [ $? -ne 0 ]
+	do
+		sleep 1
+		hciconfig hci0|grep RUNNING
+	done
+
+	# send keyevent via Inafra-Red
+	sendevent /dev/input/event0 1 28 1
+	sendevent /dev/input/event0 0 0 0
+	sendevent /dev/input/event0 1 28 0
+	sendevent /dev/input/event0 0 0 0
+
+	hciconfig hci0|grep DOWN
+	while [ $? -ne 0 ]
+	do
+		sleep 1
+		hciconfig hci0|grep DOWN
+	done
+done
