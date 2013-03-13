@@ -194,3 +194,8 @@ sudo apt-get install libnotify-dev libsqlite3-dev -y
 
 # weather indicator
 sudo apt-get install indicator-weather -y
+
+# my-weather-indicator
+# sudo add-apt-repository ppa:atareao/atareao
+# sudo apt-get update
+# sudo apt-get install my-weather-indicator
