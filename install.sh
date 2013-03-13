@@ -191,3 +191,6 @@ sudo service apache2 restart
 sudo apt-get install intltool libcurl4-openssl-dev -y
 sudo apt-get install libvlc-dev libgtk2.0-dev libdbus-glib-1-dev -y
 sudo apt-get install libnotify-dev libsqlite3-dev -y
+
+# weather indicator
+sudo apt-get install indicator-weather -y
