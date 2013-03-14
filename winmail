@@ -1,0 +1,5 @@
+mkdir /tmp/mail/
+cd /tmp/mail/
+tnef winmail.dat
+rm winmail.dat
+convmv -f gbk -t utf8 --notest *
