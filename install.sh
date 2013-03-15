@@ -98,6 +98,11 @@ sudo apt-get install libbluetooth-dev -y
 sudo apt-get install blueman
 sudo apt-get install bluez-hcidump
 
+# hcidump -w hcidump.cap
+# wireshark hcidump.cap
+sudo apt-get install wireshark -y
+
+
 # internet
 
 # Chromium, fast and best browser
