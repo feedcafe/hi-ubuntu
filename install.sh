@@ -105,6 +105,9 @@ sudo apt-get install wireshark -y
 
 # internet
 
+# nfs server
+sudo apt-get install nfs-kernel-server -y --force-yes
+
 # Chromium, fast and best browser
 sudo apt-get install chromium-browser -y
 
