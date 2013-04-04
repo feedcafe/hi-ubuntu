@@ -32,6 +32,11 @@ sudo apt-get install dos2unix
 sudo apt-get install bless	# a hex editor
 sudo apt-get install gconf-editor -y	# ubuntu gnome config editor
 
+# bluez-5.3
+sudo apt-get install libudev-dev -y
+sudo apt-get install libical-dev
+sudo apt-get install libreadline-dev -y
+
 # beyound compare
 sudo gdebi /opt/software/ubuntu/bcompare/bcompare-3.3.5.15075_i386.deb
 
