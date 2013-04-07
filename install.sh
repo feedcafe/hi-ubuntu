@@ -9,6 +9,7 @@ sudo apt-get install subversion -y
 
 
 # linux kernel dev
+sudo apt-get install gcc-arm-linux-gnueabi -y
 
 # make xconfig needs qt
 sudo apt-get install libqt4-dev -y
