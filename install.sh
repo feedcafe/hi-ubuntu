@@ -31,6 +31,8 @@ sudo apt-get install ascii
 sudo apt-get install dos2unix
 sudo apt-get install bless	# a hex editor
 sudo apt-get install gconf-editor -y	# ubuntu gnome config editor
+sudo apt-get install goldendict -y
+sudo apt-get install goldendict-wordnet
 
 # bluez-5.3
 sudo apt-get install libudev-dev -y
