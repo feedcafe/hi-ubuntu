@@ -12,7 +12,7 @@ sudo apt-get install subversion -y
 sudo apt-get install gcc-arm-linux-gnueabi -y
 
 # ubuntu linux source
-sudo apt-get install linux-source -y
+sudo apt-get source linux-image-$(uname -r)
 
 # make xconfig needs qt
 sudo apt-get install libqt4-dev -y
