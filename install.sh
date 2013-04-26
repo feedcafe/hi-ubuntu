@@ -4,6 +4,7 @@
 
 ############################ Basic Setup ###############################
 sudo apt-get install ckermit automake -y
+sudo apt-get install cutecom	# just another ckermit
 sudo apt-get install ctags
 sudo apt-get install chmsee -y
 sudo apt-get install rar unrar tree -y
