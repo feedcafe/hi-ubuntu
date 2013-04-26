@@ -142,3 +142,9 @@ md5sum $filename | cut -d " " -f1
 md5sum $filename | cut --delimiter=" " -f1
 
 kill -9 `pidof adbd`
+
+cscope -Rbkq
+
+find . -name "*.h" -o -name "*.c" -o -name "*.cc" > cscope.files
+cscope -bkq -i cscope.files
+ctags -R
