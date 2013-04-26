@@ -26,6 +26,9 @@ sudo apt-get install vim-gnome -y
 # lndir
 sudo apt-get install xutils-dev
 
+# lrzsz: free x/y/zmodem implementation
+sudo apt-get install lrzsz
+
 # ime
 sudo apt-get install ibus ibus-pinyin ibus-table-wubi -y
 
