@@ -1,0 +1,2 @@
+git tag -a v1.0 -m "milestone: v1"
+git push --tags
