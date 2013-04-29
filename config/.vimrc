@@ -148,6 +148,7 @@ nmap tl :Tlist<cr>
 
 "Quik close and save
 map <leader>q :q<cr>
+map <leader>a :qa<cr>
 map <leader>x :x<cr>
 map <leader>w :w<cr>
 
