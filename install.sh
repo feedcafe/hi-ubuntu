@@ -204,6 +204,9 @@ sudo apt-get install lzop -y
 
 sudo apt-get install uuid-dev
 
+# usbboot
+sudo apt-get install libconfuse0 libconfuse-dev -y
+
 # openocd
 sudo apt-get install openocd -y
 
