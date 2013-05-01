@@ -1013,3 +1013,21 @@ E257: cstag: tag not found
 :qa!
 :wqa
 close all tabs
+
+
+
+key <tab> confliction:
+issue the following command will only load supertab.vim when vim starts, this can be useful when debuging
+vim -u NONE -U NONE -c "set nocp | runtime plugin/supertab.vim"
+
+when I put supertab.vim in my .vim/plugin/ dir and set my .vimrc:
+
+let g:SuperTabRetainCompletionType=2
+let g:SuperTabDefaultCompletionType="<c-p>"
+
+but nothing happened, thru the command above I realise supertab is working, so the there must be key confliction
+and it turns to be true, code_complete.vim also using <tab> as its default key
+
+
+add this to resolve this confliction
+let g:completekey = "<F12>"
