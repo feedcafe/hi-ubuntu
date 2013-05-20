@@ -27,6 +27,11 @@ sudo apt-get install lrzsz
 
 # ime
 sudo apt-get install ibus ibus-pinyin ibus-table-wubi -y
+
+# pdf reader
+sudo add-apt-repository "deb http://archive.canonical.com/ubuntu $(lsb_release -sc) partner"
+sudo apt-get update
+sudo apt-get -y install acroread
 ########################################################################
 
 
