@@ -59,7 +59,8 @@ sudo mkdir /tftpboot
 sudo chmod -R 777 /tftpboot
 sudo chown -R nobody /tftpboot
 # need to edit /etc/inetd.conf
-# sudo /etc/init.d/openbsd-inetd restart
+sudo sed -i 's/\/srv\/tftp/\/tftpboot/g' /etc/inetd.conf
+sudo /etc/init.d/openbsd-inetd restart
 sudo apt-get install openssh-server -y
 ########################################################################
 
@@ -165,6 +166,8 @@ sudo apt-get install mysql-server -y
 sudo ln -s /usr/share/wordpress /var/www/wordpress
 sudo chown -R www-data /usr/share/wordpress
 #sudo bash /usr/share/doc/wordpress/examples/setup-mysql -n wordpress localhost
+
+sudo sed -i 's/Listen 80/Listen 8787/g' /etc/apache2/ports.conf
 
 sudo service apache2 restart
 ########################################################################
