@@ -18,6 +18,14 @@ E257: cstag: tag not found
 :%s/$/hello/			: insert hello at the end of line
 
 
+###################################################
+"insert copyright symbol
+:digraphs
+
+shows the list of digraphs you can use. I see the copyright symbol as
+number 169, which has a key combo of "Co". To recreate that in edit
+mode, hit Ctrl+k, then type "Co", and you should have a copyright symbol.
+
 
 ###################################################
 
