@@ -136,7 +136,7 @@ sudo apt-get install libtool -y
 sudo apt-get install uboot-mkimage -y
 sudo apt-get install mtd-utils
 sudo apt-get install gawk
-
+sudo apt-get install bsdgames	# rot13
 sudo apt-get install lzop
 
 sudo apt-get install uuid-dev
