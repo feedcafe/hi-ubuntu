@@ -1,0 +1,68 @@
+###################################################
+close all tabs
+:qa
+:qa!
+:wqa
+
+
+###################################################
+cscope issue
+E262: error reading cscope connection 0
+E257: cstag: tag not found
+
+:cs kill 0
+:cs add cscope.out
+
+###################################################
+:%s/^/hello/			: insert hello at start of line
+:%s/$/hello/			: insert hello at the end of line
+
+
+
+###################################################
+
+:%s/^\n\+/\r/               : compressing empty lines
+
+
+
+:g!/^dd/d                   : delete lines not containing string
+:v/^dd/d                    : delete lines not containing string
+
+
+
+.      last edit (magic dot)
+%                   : match brackets {}[]()
+
+
+
+" Summary of repeated searches
+;      last f, t, F or T
+,      last f, t, F or T in opposite direction
+
+
+" Changing Case
+guu                             : lowercase line
+gUU                             : uppercase line
+Vu                              : lowercase line
+VU                              : uppercase line
+g~~                             : flip case line
+vEU                             : Upper Case Word
+vE~                             : Flip Case Word
+ggguG                           : lowercase entire file
+
+ga                              : display hex,ascii value of char under cursor
+
+
+'.               : jump to last modification line (SUPER)
+`.               : jump to exact spot in last modification line
+<C-O>            : retrace your movements in file (starting from most recent)
+<C-I>            : retrace your movements in file (reverse direction)
+q/               : Search history Window (puts you in full edit mode) (exit CTRL-C)
+q:               : commandline history Window (puts you in full edit mode) (exit CTRL-C)
+
+
+==                            : index current line same as line above [N]
+
+vim -o file1 file2        : open into a horizontal split [C]
+vim -O file1 file2        : open into a vertical split [N]
+
