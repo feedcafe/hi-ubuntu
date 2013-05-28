@@ -39,6 +39,10 @@ sudo apt-get -y install acroread
 # are configured to do so are marked and you can toggle individual services
 # on and off.
 sudo apt-get install rcconf
+
+# another tool for managing services
+sudo apt-get install sysv-rc-conf -y
+
 ########################################################################
 
 
