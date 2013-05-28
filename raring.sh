@@ -32,6 +32,13 @@ sudo apt-get install ibus ibus-pinyin ibus-table-wubi -y
 sudo add-apt-repository "deb http://archive.canonical.com/ubuntu $(lsb_release -sc) partner"
 sudo apt-get update
 sudo apt-get -y install acroread
+
+# rcconf is Debian runlevel configuration tool. Rcconf allows you to control
+# which services are started when the system boots up or reboots. It displays
+# a menu of all the services which could be started at boot. The ones that
+# are configured to do so are marked and you can toggle individual services
+# on and off.
+sudo apt-get install rcconf
 ########################################################################
 
 
