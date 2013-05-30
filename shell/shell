@@ -148,3 +148,8 @@ cscope -Rbkq
 find . -name "*.h" -o -name "*.c" -o -name "*.cc" > cscope.files
 cscope -bkq -i cscope.files
 ctags -R
+
+########################################################################
+# capture screen on android
+# issue the following command via serial console
+screencap "/data/android-`date +%F-%H%M%S`.png"
