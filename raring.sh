@@ -80,6 +80,7 @@ sudo apt-get install openssh-server -y
 ############################# video program ############################
 sudo apt-get install mplayer -y
 sudo apt-get install smplayer -y
+sudo apt-get install vlc -y
 ########################################################################
 
 
