@@ -182,4 +182,5 @@ sudo chown -R www-data /usr/share/wordpress
 sudo sed -i 's/Listen 80/Listen 8787/g' /etc/apache2/ports.conf
 
 sudo service apache2 restart
+phddns -c /etc/phlinux.conf -d
 ########################################################################
