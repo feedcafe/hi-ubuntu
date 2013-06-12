@@ -1,0 +1,8 @@
+hardstatus alwayslastline
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{=kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B}%Y-%m-%d %{W}%c %{g}]'
+
+# default screens
+screen -t remote0	0
+chdir ~/work/remote/
+
+screen -t ssh		1	ssh 192.168.1.15
