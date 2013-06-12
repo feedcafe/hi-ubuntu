@@ -1,8 +1,29 @@
+# Turn off that annoying start up message
+startup_message off
+
+# scrolling with mouse
+termcapinfo xterm* ti@:te@
+
 hardstatus alwayslastline
 hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{=kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B}%Y-%m-%d %{W}%c %{g}]'
+
+# Allow editors etc. to restore display on exit
+# rather than leaving existing text in place
+altscreen on
+
+# Enable 256-color mode when screen is started with TERM=xterm-256color
+# Taken from: http://frexx.de/xterm-256-notes/
+#
+# Note that TERM != "xterm-256color" within a screen window. Rather it is
+# "screen" or "screen-bce"
+#
+# terminfo and termcap for nice 256 color terminal
+# allow bold colors - necessary for some reason
+attrcolor b ".I"
+
 
 # default screens
 screen -t remote0	0
 chdir ~/work/remote/
 
-screen -t ssh		1	ssh 192.168.1.15
+#screen -t ssh		1	ssh 192.168.1.15
