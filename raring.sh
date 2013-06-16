@@ -185,3 +185,12 @@ sudo sed -i 's/Listen 80/Listen 8787/g' /etc/apache2/ports.conf
 sudo service apache2 restart
 phddns -c /etc/phlinux.conf -d
 ########################################################################
+
+
+
+############################## linaro-media-create ###############################
+sudo apt-get install bzr -y
+sudo apt-get install python-parted
+sudo apt-get install btrfs-tools
+sudo apt-get install python-yaml
+########################################################################
