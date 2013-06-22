@@ -10,3 +10,7 @@
 	smtpuser = fudongbai@gmail.com
 	smtpssl = yes
 	from = Fudong Bai <fudongbai@gmail.com>
+[push]
+	default = simple
+[credential]
+	helper = cache --timeout=3600
