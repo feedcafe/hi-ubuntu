@@ -1,0 +1,37 @@
+#!/system/bin/sh
+
+RANGE=2
+count=0
+
+event=3
+
+while true
+do
+	num=$RANDOM
+	let "num %= $RANGE"
+	let count+=1
+	echo $count
+
+	if [ $num -eq 1 ]
+	then
+		# send keyevent F9
+		echo "send key F9"
+		# input keyevent F9
+		sendevent /dev/input/event$event 1 67 1
+		sendevent /dev/input/event$event 0 0 0
+		sendevent /dev/input/event$event 1 67 0
+		sendevent /dev/input/event$event 0 0 0
+		#sleep 20
+	else
+
+		# send keyevent F11
+		echo "send key F11"
+		# input keyevent F11
+		sendevent /dev/input/event$event 1 87 1
+		sendevent /dev/input/event$event 0 0 0
+		sendevent /dev/input/event$event 1 87 0
+		sendevent /dev/input/event$event 0 0 0
+		#sleep 20
+	fi
+
+done
