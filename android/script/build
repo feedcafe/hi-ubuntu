@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo $ANDROID_BUILD_TOP
+if [[ -z $ANDROID_BUILD_TOP ]]; then
+	echo "hello"
+	cd ../../../
+	. build/envsetup.sh
+	lunch full_panda-userdebug
+	cd -
+fi
+
+mm
