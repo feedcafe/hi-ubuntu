@@ -188,9 +188,24 @@ phddns -c /etc/phlinux.conf -d
 
 
 
-############################## linaro-media-create ###############################
+############################## linaro-media-create #####################
 sudo apt-get install bzr -y
 sudo apt-get install python-parted
 sudo apt-get install btrfs-tools
 sudo apt-get install python-yaml
+########################################################################
+
+
+
+######################### office #######################################
+sudo apt-get install freemind -y
+sudo apt-get install cherrytree
+########################################################################
+
+
+
+########################## games #######################################
+wget http://repo.steampowered.com/steam/archive/precise/steam_latest.deb
+
+sudo dpkg -i steam_latest.deb && sudo apt-get install -fy
 ########################################################################
