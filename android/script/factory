@@ -1,0 +1,9 @@
+#!/system/bin/sh
+
+event=0
+
+echo "send factory M"
+adb shell sendevent /dev/input/event$event 1 620 1
+adb shell sendevent /dev/input/event$event 0 0 0
+adb shell sendevent /dev/input/event$event 1 620 0
+adb shell sendevent /dev/input/event$event 0 0 0
