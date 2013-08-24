@@ -153,3 +153,8 @@ ctags -R
 # capture screen on android
 # issue the following command via serial console
 screencap "/data/android-`date +%F-%H%M%S`.png"
+
+
+########################################################################
+javaws androidscreencast.jnlp
+
