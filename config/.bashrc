@@ -111,7 +111,7 @@ fi
 
 
 export PATH=$PATH:/usr/lib/jvm/jdk1.6.0_32/bin
-export JAVA_HOME=/usr/lib/jvm/jdk1.6.0_32/bin
+export JAVA_HOME=/usr/lib/jvm/jdk1.6.0_32/
 
 export PATH=$PATH:/usr/local/arm-2012.03/bin
 export PATH=$PATH:/opt/android/android-sdk-linux/tools/
