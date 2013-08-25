@@ -96,6 +96,9 @@ gtv_get_macaddr()
 
 main()
 {
+	# set timezone
+	setprop persist.sys.timezone Asia/Shanghai
+
 	# make sure directory exist
 	if [ ! -d "$log_path" ]; then
 		mkdir $log_path
