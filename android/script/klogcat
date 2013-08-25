@@ -66,6 +66,12 @@ gtv_get_bdaddr()
 	cat /sys/devices/virtual/bluetooth/hci0/address > $log_path/bdaddr.txt
 }
 
+gtv_kmsg()
+{
+	echo `date +%F-%H-%M-%S` > $log_path/kmsg.txt
+	cat /proc/kmsg >>$log_path/kmsg.txt&
+}
+
 main()
 {
 	# make sure directory exist
@@ -89,6 +95,9 @@ main()
 
 	# get bluetooth adapter mac address
 	gtv_get_bdaddr
+
+	# get kernel log
+	gtv_kmsg
 }
 
 main
