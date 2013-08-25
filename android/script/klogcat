@@ -94,6 +94,13 @@ gtv_get_macaddr()
 	netcfg |grep eth0|busybox cut -d " " -f40 > $log_path/macaddr.txt
 }
 
+gtv_pack_log()
+{
+	cd /sdcard/
+	busybox tar cvf klogcat.tar klogcat
+	busybox bzip2 -zvv klogcat.tar
+}
+
 main()
 {
 	# set timezone
@@ -101,7 +108,7 @@ main()
 
 	# make sure directory exist
 	if [ ! -d "$log_path" ]; then
-		mkdir $log_path
+		mkdir -p $log_path
 	fi
 
 	echo "log directory: $log_path"
@@ -132,6 +139,9 @@ main()
 
 	# getevent
 	gtv_getevent
+
+	# pack all the log file
+	gtv_pack_log
 }
 
 main
