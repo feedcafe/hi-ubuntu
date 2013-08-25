@@ -1,5 +1,8 @@
 #!/system/bin/sh
 
+log_path="/sdcard/klogcat/"`date +%F`
+screencap_path="$log_path/screencap/"
+
 switch_channel()
 {
 	RANGE=2
@@ -43,4 +46,30 @@ switch_channel()
 	done
 }
 
-switch_channel
+btsnoop_enable()
+{
+	bt_stack="/system/etc/bluetooth/bt_stack.conf"
+	mount -o remount,rw /system
+	busybox sed -i 's/BtSnoopLogOutput=false/BtSnoopLogOutput=true/g' $bt_stack
+}
+
+main()
+{
+	# make sure directory exist
+	if [ ! -d "$log_path" ]; then
+		mkdir $log_path
+	fi
+
+	echo "log directory: $log_path"
+	echo "screencap directory: $screencap_path"
+
+	# remove outdated traces.txt
+	if [ -f /data/anr/traces.txt ]; then
+		rm /data/anr/traces.txt
+	fi
+
+	# enable btsnoop for hci debug
+	btsnoop_enable
+}
+
+main
