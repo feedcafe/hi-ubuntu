@@ -49,7 +49,7 @@ switch_channel()
 gtv_screencast()
 {
 	if [ ! -d "$screencap_path" ]; then
-		mkdir $screencap_path
+		mkdir -p $screencap_path
 	fi
 	screencap "$screencap_path/android-`date +%F-%H-%M-%S`.png"
 }
