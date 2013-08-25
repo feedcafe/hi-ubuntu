@@ -61,6 +61,11 @@ btsnoop_enable()
 	busybox sed -i 's/BtSnoopLogOutput=false/BtSnoopLogOutput=true/g' $bt_stack
 }
 
+gtv_get_bdaddr()
+{
+	cat /sys/devices/virtual/bluetooth/hci0/address > $log_path/bdaddr.txt
+}
+
 main()
 {
 	# make sure directory exist
@@ -81,6 +86,9 @@ main()
 
 	# get current screen shot
 	gtv_screencast
+
+	# get bluetooth adapter mac address
+	gtv_get_bdaddr
 }
 
 main
