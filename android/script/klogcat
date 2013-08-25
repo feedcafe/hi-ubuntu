@@ -46,6 +46,14 @@ switch_channel()
 	done
 }
 
+gtv_screencast()
+{
+	if [ ! -d "$screencap_path" ]; then
+		mkdir $screencap_path
+	fi
+	screencap "$screencap_path/android-`date +%F-%H-%M-%S`.png"
+}
+
 btsnoop_enable()
 {
 	bt_stack="/system/etc/bluetooth/bt_stack.conf"
@@ -70,6 +78,9 @@ main()
 
 	# enable btsnoop for hci debug
 	btsnoop_enable
+
+	# get current screen shot
+	gtv_screencast
 }
 
 main
