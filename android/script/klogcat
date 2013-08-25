@@ -101,6 +101,17 @@ gtv_pack_log()
 	busybox bzip2 -zvv klogcat.tar
 }
 
+gtv_internet_available()
+{
+	ping -c 7 g.cn
+	if [ $? -eq 0 ]
+	then
+		echo "internet available"
+	else [ $? -eq 2 ]
+		echo "ping: unknown host g.cn"
+	fi
+}
+
 main()
 {
 	# set timezone
@@ -142,6 +153,9 @@ main()
 
 	# pack all the log file
 	gtv_pack_log
+
+	# see if we can send mail to module owner
+	gtv_internet_available
 }
 
 main
