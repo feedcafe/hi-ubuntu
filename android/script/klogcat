@@ -77,6 +77,12 @@ gtv_getprop()
 	getprop > $log_path/getprop.txt
 }
 
+gtv_getevent()
+{
+	echo `date +%F-%H-%M-%S` > $log_path/getevent.txt
+	getevent -lt >> $log_path/getevent.txt&
+}
+
 main()
 {
 	# make sure directory exist
@@ -106,6 +112,9 @@ main()
 
 	# get kernel log
 	gtv_kmsg
+
+	# getevent
+	gtv_getevent
 }
 
 main
