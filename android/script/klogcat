@@ -101,8 +101,8 @@ main()
 	# enable btsnoop for hci debug
 	btsnoop_enable
 
-	# get current screen shot
-	gtv_screencast
+	# get kernel log
+	gtv_kmsg
 
 	# get bluetooth adapter mac address
 	gtv_get_bdaddr
@@ -110,8 +110,8 @@ main()
 	# get device info
 	gtv_getprop
 
-	# get kernel log
-	gtv_kmsg
+	# get current screen shot
+	gtv_screencast
 
 	# getevent
 	gtv_getevent
