@@ -83,6 +83,17 @@ gtv_getevent()
 	getevent -lt >> $log_path/getevent.txt&
 }
 
+gtv_getip()
+{
+	netcfg |grep eth0|busybox cut -d " " -f37
+}
+
+gtv_get_macaddr()
+{
+	# mac address
+	netcfg |grep eth0|busybox cut -d " " -f40 > $log_path/macaddr.txt
+}
+
 main()
 {
 	# make sure directory exist
@@ -106,6 +117,9 @@ main()
 
 	# get bluetooth adapter mac address
 	gtv_get_bdaddr
+
+	# get ethernet mac address
+	gtv_get_macaddr
 
 	# get device info
 	gtv_getprop
