@@ -72,6 +72,11 @@ gtv_kmsg()
 	cat /proc/kmsg >>$log_path/kmsg.txt&
 }
 
+gtv_getprop()
+{
+	getprop > $log_path/getprop.txt
+}
+
 main()
 {
 	# make sure directory exist
@@ -95,6 +100,9 @@ main()
 
 	# get bluetooth adapter mac address
 	gtv_get_bdaddr
+
+	# get device info
+	gtv_getprop
 
 	# get kernel log
 	gtv_kmsg
