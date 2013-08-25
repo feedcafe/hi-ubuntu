@@ -103,13 +103,35 @@ gtv_pack_log()
 
 gtv_internet_available()
 {
-	ping -c 7 g.cn
+	ping -c 2 g.cn
 	if [ $? -eq 0 ]
 	then
 		echo "internet available"
 	else [ $? -eq 2 ]
 		echo "ping: unknown host g.cn"
 	fi
+}
+
+busybox_sendmail()
+{
+	echo "###################################################################"
+	echo "#                                                                 #"
+	echo "#                    send mail to module owner                    #"
+	echo "#                  using busybox swiss army knife                 #"
+	echo "#                                                                 #"
+	echo "###################################################################"
+
+	mailserver="74.208.5.15"
+	mailfrom="fudong@mail.com"
+	mailto="fudongbai@gmail.com"
+	username="fudong@mail.com"
+
+	# need a new line between subject and mail body
+	echo "Subject: someone has issue" > $log_path/mail.txt
+	echo "" >> $log_path/mail.txt
+	cat $log_path/getprop.txt >> $log_path/mail.txt
+	busybox sendmail -v -S $mailserver -f $mailfrom \
+		-au$username -ap"123456" $mailto < $log_path/mail.txt
 }
 
 main()
@@ -156,6 +178,9 @@ main()
 
 	# see if we can send mail to module owner
 	gtv_internet_available
+
+	# send mail to module owner
+	busybox_sendmail
 }
 
 main
