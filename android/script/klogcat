@@ -113,7 +113,7 @@ gtv_get_macaddr()
 
 gtv_bluetooth_status()
 {
-	am start -n "com.android.settings/.bluetooth.BluetoothSettings"
+	adb shell am start -n "com.android.settings/.bluetooth.BluetoothSettings"
 	gtv_screencast
 }
 
