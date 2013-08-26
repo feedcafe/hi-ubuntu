@@ -46,6 +46,23 @@ switch_channel()
 	done
 }
 
+onoff_test()
+{
+	count=0
+
+	while true
+	do
+		# send keyevent KEYCODE_ENTER
+		input keyevent 66
+		sleep 1
+		input keyevent 66
+		sleep 17
+
+		let count+=1
+		echo tested $count times
+	done
+}
+
 gtv_screencast()
 {
 	if [ ! -d "$screencap_path" ]; then
