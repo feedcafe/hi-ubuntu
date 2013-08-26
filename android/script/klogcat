@@ -135,6 +135,7 @@ gtv_internet_available()
 	fi
 }
 
+# send plain text message using busybox sendmail applet
 busybox_sendmail()
 {
 	echo "###################################################################"
@@ -147,15 +148,35 @@ busybox_sendmail()
 	mailserver="74.208.5.15"
 	mailfrom="fudong@mail.com"
 	mailto="fudongbai@gmail.com"
-	username="fudong@mail.com"
 
 	# need a new line between subject and mail body
 	echo "Subject: someone has issue" > $log_path/mail.txt
 	echo "" >> $log_path/mail.txt
 	cat $log_path/getprop.txt >> $log_path/mail.txt
 	busybox sendmail -v -S $mailserver -f $mailfrom \
-		-au$username -ap"qwerty123" $mailto < $log_path/mail.txt
+		-au"fudong@mail.com" -ap"qwerty123" $mailto < $log_path/mail.txt
 }
+
+# send plain text message using busybox sendmail applet
+busybox_sendmail_with_attachment()
+{
+	echo "###################################################################"
+	echo "#                                                                 #"
+	echo "#                   send mail to module owner                     #"
+	echo "#               using busybox makemime and sendmail               #"
+	echo "#                                                                 #"
+	echo "###################################################################"
+
+	mailserver="74.208.5.15"
+	mailfrom="fudong@mail.com"
+	mailto="fudong@mail.com"
+	subject="Someone has issue"
+
+	busybox makemime -a "Subject: $subject" -o /sdcard/attachment /sdcard/klogcat.tar.bz2
+	busybox sendmail -v -S $mailserver -f $mailfrom \
+		-au"fudong@mail.com" -ap"qwerty123" $mailto < /sdcard/attachment
+}
+
 
 main()
 {
@@ -203,10 +224,11 @@ main()
 	gtv_pack_log
 
 	# see if we can send mail to module owner
-	gtv_internet_available
+	#gtv_internet_available
 
 	# send mail to module owner
-	busybox_sendmail
+	#busybox_sendmail
+	busybox_sendmail_with_attachment
 }
 
 main
