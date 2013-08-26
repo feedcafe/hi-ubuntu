@@ -111,6 +111,12 @@ gtv_get_macaddr()
 	netcfg |grep eth0|busybox cut -d " " -f40 > $log_path/macaddr.txt
 }
 
+gtv_bluetooth_status()
+{
+	am start -n "com.android.settings/.bluetooth.BluetoothSettings"
+	gtv_screencast
+}
+
 gtv_pack_log()
 {
 	cd /sdcard/
@@ -148,7 +154,7 @@ busybox_sendmail()
 	echo "" >> $log_path/mail.txt
 	cat $log_path/getprop.txt >> $log_path/mail.txt
 	busybox sendmail -v -S $mailserver -f $mailfrom \
-		-au$username -ap"123456" $mailto < $log_path/mail.txt
+		-au$username -ap"qwerty123" $mailto < $log_path/mail.txt
 }
 
 main()
@@ -183,6 +189,9 @@ main()
 
 	# get device info
 	gtv_getprop
+
+	# bluetooth settings
+	gtv_bluetooth_status
 
 	# get current screen shot
 	gtv_screencast
