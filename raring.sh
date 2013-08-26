@@ -151,8 +151,8 @@ sudo apt-get install mtd-utils
 sudo apt-get install gawk
 sudo apt-get install bsdgames	# rot13
 sudo apt-get install lzop
-
 sudo apt-get install uuid-dev
+sudo apt-get install inotify-tools -y
 
 # usbboot
 sudo apt-get install libconfuse0 libconfuse-dev -y
