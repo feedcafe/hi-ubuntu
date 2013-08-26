@@ -177,6 +177,12 @@ busybox_sendmail_with_attachment()
 		-au"fudong@mail.com" -ap"qwerty123" $mailto < /sdcard/attachment
 }
 
+# remove all the temp files
+gtv_cleanup()
+{
+	rm /sdcard/klogcat.tar*
+	rm /sdcard/attachment
+}
 
 main()
 {
@@ -229,6 +235,8 @@ main()
 	# send mail to module owner
 	#busybox_sendmail
 	busybox_sendmail_with_attachment
+
+	gtv_cleanup
 }
 
 main
