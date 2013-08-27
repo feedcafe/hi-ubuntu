@@ -191,6 +191,8 @@ gtv_cleanup()
 	if [ -f /data/anr/traces.txt ]; then
 		rm /data/anr/traces.txt
 	fi
+
+	kill -15 `busybox pidof getevent`
 }
 
 main()
