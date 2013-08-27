@@ -1,6 +1,7 @@
 #!/system/bin/sh
 
-log_path="/sdcard/klogcat/"`date +%F`
+root_path="/data"
+log_path="$root_path/klogcat/"`date +%F`
 screencap_path="$log_path/screencap/"
 
 switch_channel()
@@ -119,7 +120,7 @@ gtv_bluetooth_status()
 
 gtv_pack_log()
 {
-	cd /sdcard/
+	cd $root_path
 	busybox tar cvf klogcat.tar klogcat
 	busybox bzip2 -zvv klogcat.tar
 }
@@ -172,16 +173,19 @@ busybox_sendmail_with_attachment()
 	mailto="fudong@mail.com"
 	subject="Someone has issue"
 
-	busybox makemime -a "Subject: $subject" -o /sdcard/attachment /sdcard/klogcat.tar.bz2
+	busybox makemime -a "Subject: $subject" \
+		-o $root_path/attachment \
+		$root_path/klogcat.tar.bz2
 	busybox sendmail -v -S $mailserver -f $mailfrom \
-		-au"fudong@mail.com" -ap"qwerty123" $mailto < /sdcard/attachment
+		-au"fudong@mail.com" -ap"qwerty123" \
+		$mailto < $root_path/attachment
 }
 
 # remove all the temp files
 gtv_cleanup()
 {
-	rm /sdcard/klogcat.tar*
-	rm /sdcard/attachment
+	rm $root_path/klogcat.tar*
+	rm $root_path/attachment
 }
 
 main()
