@@ -195,6 +195,22 @@ gtv_cleanup()
 	kill -15 `busybox pidof getevent`
 }
 
+gtv_post_processing()
+{
+	# bluetooth hci log
+	cp /sdcard/btsnoop_hci.log $log_path/
+
+	# pack all the log file
+	gtv_pack_log
+
+	# see if we can send mail to module owner
+	#gtv_internet_available
+
+	# send mail to module owner
+	#busybox_sendmail
+	busybox_sendmail_with_attachment
+}
+
 main()
 {
 	# set timezone
@@ -233,15 +249,7 @@ main()
 	# getevent
 	gtv_getevent
 
-	# pack all the log file
-	gtv_pack_log
-
-	# see if we can send mail to module owner
-	#gtv_internet_available
-
-	# send mail to module owner
-	#busybox_sendmail
-	busybox_sendmail_with_attachment
+	gtv_post_processing
 
 	gtv_cleanup
 }
