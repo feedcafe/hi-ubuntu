@@ -140,6 +140,19 @@ gtv_pack_log()
 	cd $root_path
 	busybox tar cvf klogcat.tar klogcat
 	busybox bzip2 -zvv klogcat.tar
+
+	# busybox stat -c "%s" klogcat.tar.bz2
+	# if attachment larger than 5 MB, script will send plain text mail
+	size=`busybox du -k /sdcard/klogcat.tar.bz2|busybox awk '{print $1}'`
+	max_size=5*1024
+
+	if [[ $size -lt $max_size ]]; then
+		echo "attachment not exceeds limit size (5 MB)"
+		plain_text_mail="false"
+	else
+		echo "attachment too large, send plain text mail"
+		plain_text_mail="true"
+	fi
 }
 
 gtv_internet_available()
