@@ -64,6 +64,7 @@ onoff_test()
 	done
 }
 
+# get current screen shot
 gtv_screencast()
 {
 	if [ ! -d "$screencap_path" ]; then
@@ -72,6 +73,7 @@ gtv_screencast()
 	screencap "$screencap_path/android-`date +%F-%H-%M-%S`.png"
 }
 
+# enable btsnoop for hci debug
 btsnoop_enable()
 {
 	bt_stack="/system/etc/bluetooth/bt_stack.conf"
@@ -223,7 +225,7 @@ gtv_post_processing()
 	busybox_sendmail_with_attachment
 }
 
-main()
+gtv_prepare()
 {
 	# set timezone
 	setprop persist.sys.timezone Asia/Shanghai
@@ -236,33 +238,34 @@ main()
 	echo "log directory: $log_path"
 	echo "screencap directory: $screencap_path"
 
-
-	# enable btsnoop for hci debug
-	btsnoop_enable
-
-	# get kernel log
-	gtv_kmsg
+	# get ethernet mac address
+	gtv_get_macaddr
 
 	# get bluetooth adapter mac address
 	# gtv_get_bdaddr
 
-	# get ethernet mac address
-	gtv_get_macaddr
-
 	# get device info
 	gtv_getprop
+}
+
+gtv_bluetooth_log()
+{
+	# get kernel log
+	gtv_kmsg
 
 	# bluetooth settings
 	gtv_bluetooth_status
+}
 
-	# get current screen shot
-	gtv_screencast
-
+gtv_remote_log()
+{
 	# getevent
 	gtv_getevent
+}
 
+main()
+{
 	gtv_post_processing
-
 	gtv_cleanup
 }
 
