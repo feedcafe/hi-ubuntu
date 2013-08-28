@@ -253,6 +253,18 @@ gtv_prepare()
 
 	# get device info
 	gtv_getprop
+
+	# need bluetooth log?
+	while true; do
+		echo "Do you wish to enable bluedroid log? [Yes/No]"
+		read yesno
+		case $yesno in
+			[Yy]* ) btsnoop_enable;
+				break;;
+			[Nn]* ) exit;;
+			* ) echo "Please answer yes or no.";;
+		esac
+	done
 }
 
 gtv_bluetooth_log()
@@ -274,17 +286,6 @@ main()
 {
 	gtv_post_processing plain_text_mail
 	#gtv_cleanup
-
-	while true; do
-		echo "Do you wish to enable bluedroid log? [Yes/No]"
-		read yesno
-		case $yesno in
-			[Yy]* ) btsnoop_enable;
-				break;;
-			[Nn]* ) exit;;
-			* ) echo "Please answer yes or no.";;
-		esac
-	done
 }
 
 main
