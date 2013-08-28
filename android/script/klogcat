@@ -3,6 +3,10 @@
 root_path="/data"
 log_path="$root_path/klogcat/"`date +%F`
 screencap_path="$log_path/screencap/"
+plain_text_mail="false"
+
+mailserver="74.208.5.15"
+mailfrom="fudong@mail.com"
 
 switch_channel()
 {
@@ -159,8 +163,6 @@ busybox_sendmail()
 	echo "#                                                                 #"
 	echo "###################################################################"
 
-	mailserver="74.208.5.15"
-	mailfrom="fudong@mail.com"
 	mailto="fudongbai@gmail.com"
 
 	# need a new line between subject and mail body
@@ -181,8 +183,7 @@ busybox_sendmail_with_attachment()
 	echo "#                                                                 #"
 	echo "###################################################################"
 
-	mailserver="74.208.5.15"
-	mailfrom="fudong@mail.com"
+
 	mailto="fudong@mail.com"
 	subject="Someone has issue"
 
@@ -221,8 +222,14 @@ gtv_post_processing()
 	#gtv_internet_available
 
 	# send mail to module owner
-	#busybox_sendmail
-	busybox_sendmail_with_attachment
+
+	if [ $1 = "true" ]; then
+		echo "sending plain text mail"
+		busybox_sendmail
+	else
+		echo "sending mail with attachment"
+		busybox_sendmail_with_attachment
+	fi
 }
 
 gtv_prepare()
@@ -265,7 +272,7 @@ gtv_remote_log()
 
 main()
 {
-	#gtv_post_processing
+	gtv_post_processing plain_text_mail
 	#gtv_cleanup
 
 	while true; do
