@@ -78,6 +78,16 @@ btsnoop_enable()
 	mount -o remount,rw /system
 	busybox sed -i 's/BtSnoopLogOutput=false/BtSnoopLogOutput=true/g' $bt_stack
 	busybox sed -i 's/BtSnoopFileName=\/sdcard\/btsnoop_hci.log/BtSnoopFileName=\/data\/misc\/bluedroid\/btsnoop_hci.log/g' $bt_stack
+
+	# dump more log
+	busybox sed -i 's/TRC_BTM=2/TRC_BTM=5/g' $bt_stack
+	busybox sed -i 's/TRC_HCI=2/TRC_HCI=5/g' $bt_stack
+	busybox sed -i 's/TRC_L2CAP=2/TRC_L2CAP=5/g' $bt_stack
+	busybox sed -i 's/TRC_SDP=2/TRC_SDP=5/g' $bt_stack
+	busybox sed -i 's/TRC_GATT=2/TRC_GATT=5/g' $bt_stack
+	busybox sed -i 's/TRC_SMP=2/TRC_SMP=5/g' $bt_stack
+	busybox sed -i 's/TRC_BTAPP=2/TRC_BTAPP=5/g' $bt_stack
+	busybox sed -i 's/TRC_BTIF=2/TRC_BTIF=5/g' $bt_stack
 }
 
 gtv_get_bdaddr()
