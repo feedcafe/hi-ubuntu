@@ -265,8 +265,19 @@ gtv_remote_log()
 
 main()
 {
-	gtv_post_processing
-	gtv_cleanup
+	#gtv_post_processing
+	#gtv_cleanup
+
+	while true; do
+		echo "Do you wish to enable bluedroid log? [Yes/No]"
+		read yesno
+		case $yesno in
+			[Yy]* ) btsnoop_enable;
+				break;;
+			[Nn]* ) exit;;
+			* ) echo "Please answer yes or no.";;
+		esac
+	done
 }
 
 main
