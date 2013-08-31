@@ -5,8 +5,13 @@ log_path="$root_path/klogcat/"`date +%F`
 screencap_path="$log_path/screencap/"
 plain_text_mail="false"
 
+# mail stuff
 mailserver="74.208.5.15"
 mailfrom="fudong@mail.com"
+mailto="fudong@mail.com"
+someone="Fudong"
+product="Vision"
+subject="$someone's $product has issue"
 
 switch_channel()
 {
@@ -176,14 +181,12 @@ busybox_sendmail()
 	echo "#                                                                 #"
 	echo "###################################################################"
 
-	mailto="fudongbai@gmail.com"
-
 	# need a new line between subject and mail body
-	echo "Subject: someone has issue" > $log_path/mail.txt
+	echo "Subject: $subject" > $log_path/mail.txt
 	echo "" >> $log_path/mail.txt
 	cat $log_path/getprop.txt >> $log_path/mail.txt
-	busybox sendmail -v -S $mailserver -f $mailfrom \
-		-au"fudong@mail.com" -ap"qwerty123" $mailto < $log_path/mail.txt
+	cat $log_path/mail.txt | busybox sendmail -v -S $mailserver -f $mailfrom \
+		-au"fudong@mail.com" -ap"qwerty123" $mailto
 }
 
 # send plain text message using busybox sendmail applet
@@ -195,10 +198,6 @@ busybox_sendmail_with_attachment()
 	echo "#               using busybox makemime and sendmail               #"
 	echo "#                                                                 #"
 	echo "###################################################################"
-
-
-	mailto="fudong@mail.com"
-	subject="Someone has issue"
 
 	busybox makemime -a "Subject: $subject" \
 		-o $root_path/attachment \
