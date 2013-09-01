@@ -166,8 +166,8 @@ busybox_sendmail()
 	echo "Subject: $subject" > $log_path/mail.txt
 	echo "" >> $log_path/mail.txt
 	cat $log_path/getprop.txt >> $log_path/mail.txt
-	cat $log_path/mail.txt | busybox sendmail -v -S $mailserver -f $mailfrom \
-		-au"$username" -ap"$passwd" $mailto
+	cat $log_path/mail.txt | busybox sendmail -v -S $mailserver \
+		-f $mailfrom -au"$username" -ap"$passwd" $mailto
 }
 
 # send plain text message using busybox sendmail applet
@@ -183,9 +183,9 @@ busybox_sendmail_with_attachment()
 	busybox makemime -a "Subject: $subject" \
 		-o $klogcat_path/attachment \
 		$klogcat_path/klogcat.tar.bz2
-	busybox sendmail -v -S $mailserver -f $mailfrom \
-		-au"$username" -ap"$passwd" \
-		$mailto < $klogcat_path/attachment
+	cat $klogcat_path/attachment | busybox sendmail -v \
+		-S $mailserver -f $mailfrom \
+		-au"$username" -ap"$passwd" $mailto
 }
 
 # remove all the temp files
