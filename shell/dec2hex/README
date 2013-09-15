@@ -1,0 +1,1 @@
+cat event.txt |source test1.sh > new.txt
