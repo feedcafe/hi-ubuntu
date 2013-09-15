@@ -1,1 +1,4 @@
 sed -i 's/find /find -L /g' build/core/Makefile
+
+# add prefix string to each line
+sed -i -e 's/^/prefix/' file
