@@ -43,7 +43,7 @@ sudo apt-get install rcconf
 # another tool for managing services
 sudo apt-get install sysv-rc-conf -y
 sudo apt-get install screen
-
+sudo apt-get install linux-tools -y
 ########################################################################
 
 
