@@ -154,6 +154,8 @@ sudo apt-get install lzop
 sudo apt-get install uuid-dev
 sudo apt-get install inotify-tools -y
 
+sudo apt-get install manpages-posix-dev -y
+
 # usbboot
 sudo apt-get install libconfuse0 libconfuse-dev -y
 
