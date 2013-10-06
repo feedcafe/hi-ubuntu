@@ -243,6 +243,7 @@ sudo apt-get install skype -y
 # Teredo IPv6 tunneling software for Ubuntu
 sudo apt-get install miredo
 
+sudo apt-get install intltool -y
 
 # Schedule alarms/reminders easily from an indicator
 # sudo apt-get install indicator-remindor
