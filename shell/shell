@@ -158,3 +158,7 @@ screencap "/data/android-`date +%F-%H%M%S`.png"
 ########################################################################
 javaws androidscreencast.jnlp
 
+
+########################################################################
+# extract dalvikvm related stuff to file
+awk /"dalvikvm"/ logcat.txt > tmp.txt
