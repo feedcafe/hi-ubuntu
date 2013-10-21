@@ -72,6 +72,7 @@ sudo apt-get install zlib1g-dev libssl-dev -y
 sudo apt-get install libglib2.0-dev -y
 sudo apt-get install gcc-multilib -y
 sudo apt-get install xsltproc
+sudo apt-get install libxml2-utils
 ########################################################################
 
 
