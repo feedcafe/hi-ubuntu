@@ -21,6 +21,7 @@ sudo apt-get install vim-gnome -y
 
 # lndir
 sudo apt-get install xutils-dev
+sudo apt-get install audacity -y
 
 # lrzsz: free x/y/zmodem implementation
 sudo apt-get install lrzsz
