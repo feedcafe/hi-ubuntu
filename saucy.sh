@@ -61,6 +61,7 @@ sudo apt-get install openssh-server -y
 sudo apt-get install mplayer -y
 sudo apt-get install smplayer -y
 sudo apt-get install vlc -y
+sudo apt-get install winff libavcodec-extra-53 -y
 ########################################################################
 
 
