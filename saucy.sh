@@ -153,6 +153,8 @@ sudo apt-get install gcc-arm-linux-gnueabi -y
 # nfs server
 sudo apt-get install nfs-kernel-server -y
 
+sudo apt-get install valgrind
+
 sudo apt-get install gcc-arm-linux-gnueabi -y
 
 sudo apt-get install apt-file -y
