@@ -93,6 +93,9 @@ sudo apt-get install libnotify-dev libsqlite3-dev -y
 sudo apt-get install blueman
 sudo apt-get install bluez-hcidump
 
+# used for locking/unlocking ubuntu
+sudo apt-get install blueproximity
+
 # hcidump -w hcidump.cap
 # wireshark hcidump.cap
 sudo apt-get install wireshark -y
