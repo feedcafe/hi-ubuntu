@@ -69,6 +69,8 @@ ffmpeg -an -f video4linux2 -s 640x480 -r 5 -b 200000 -i /dev/video0 test.avi
 xhost +192.168.1.1
 ssh 192.168.1.1
 
+ssh -XY linuxabc@192.168.1.98
+# firefox&
 
 ########################################################################
 rdesktop 192.168.1.1 -g 1024x768&
