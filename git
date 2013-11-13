@@ -1,2 +1,9 @@
 git tag -a v1.0 -m "milestone: v1"
 git push --tags
+
+# discard all changes
+git reset --hard HEAD
+git reset --hard HEAD^
+git reset --hard HEAD^
+
+git checkout -- <file or directory>
