@@ -163,6 +163,9 @@ sudo apt-get install valgrind
 sudo apt-get install gcc-arm-linux-gnueabi -y
 
 sudo apt-get install apt-file -y
+
+# cisco vpn
+sudo apt-get install openconnect -y
 ########################################################################
 
 
