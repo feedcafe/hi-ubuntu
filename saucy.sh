@@ -125,6 +125,15 @@ convmv -r -f utf8 -t iso88591 *.mp3 --notest --nosmart && convmv -r -f gbk -t ut
 ########################################################################
 
 
+############################## sun jdk #################################
+./jdk-6u26-linux-x64.bin
+sudo mv jdk1.6.0_26/ /usr/lib/jvm/
+sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk1.6.0_26/bin/java 87
+sudo update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/jdk1.6.0_26/bin/javac 87
+# sudo update-alternatives --config java
+########################################################################
+
+
 ############################## usb #####################################
 # libusb
 sudo apt-get install libusb-dev
