@@ -1,0 +1,9 @@
+#!/system/bin/sh
+
+while true
+do
+	input touchscreen tap 615 366
+	sleep 2
+	input touchscreen tap 615 366
+	sleep 2
+done
