@@ -17,3 +17,6 @@ fdbai@fdbai-laptop:~/root/tmp$ find . | cpio -o -H newc | gzip > ../ramdisk-new.
 
 # start an activity
 am start -n com.android.development/.PointerLocation
+
+# tap on screen
+input touchscreen tap 615 366
