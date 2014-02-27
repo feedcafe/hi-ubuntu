@@ -164,3 +164,6 @@ javaws androidscreencast.jnlp
 ########################################################################
 # extract dalvikvm related stuff to file
 awk /"dalvikvm"/ logcat.txt > tmp.txt
+
+# connect via VPN
+sudo openconnect ssl.linuxabc.com -b -u linuxabc
