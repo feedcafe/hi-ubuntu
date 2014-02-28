@@ -167,3 +167,6 @@ awk /"dalvikvm"/ logcat.txt > tmp.txt
 
 # connect via VPN
 sudo openconnect ssl.linuxabc.com -b -u linuxabc
+
+# play pcm audio file extracted from hidraw
+aplay -f S16_LE -r 16000 *.pcm
