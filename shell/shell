@@ -170,3 +170,6 @@ sudo openconnect ssl.linuxabc.com -b -u linuxabc
 
 # play pcm audio file extracted from hidraw
 aplay -f S16_LE -r 16000 *.pcm
+
+# add wav header to pcm files
+ffmpeg -f s16le -ar 16k -ac 1 -i file.pcm file.wav
