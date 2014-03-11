@@ -175,6 +175,10 @@ sudo apt-get install apt-file -y
 
 # cisco vpn
 sudo apt-get install openconnect -y
+
+# sbc decode/encode
+# sbcdec -f test.pcm test.sbc
+sudo apt-get install sbc-tools
 ########################################################################
 
 
