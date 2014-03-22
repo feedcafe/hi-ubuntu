@@ -93,6 +93,9 @@ sudo apt-get install openconnect -y
 # EIO 5 Input/output error
 sudo apt-get install errno -y
 
+# android tools
+sudo apt-get install android-tools-adb
+
 ########################################################################
 
 
