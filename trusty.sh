@@ -95,7 +95,7 @@ sudo apt-get install errno -y
 
 # android tools
 sudo apt-get install android-tools-adb
-
+sudo apt-get install android-tools-fastboot
 ########################################################################
 
 
