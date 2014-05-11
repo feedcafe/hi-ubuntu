@@ -64,6 +64,10 @@ sudo apt-get install mplayer -y
 sudo apt-get install smplayer -y
 sudo apt-get install winff libavcodec-extra-54 -y
 sudo apt-get install freetuxtv -y
+# for program "Videos" need to install the following packages to play
+# windoss asf files
+sudo apt-get install gstreamer1.0-plugins-ugly
+sudo apt-get install gstreamer1.0-libav
 ########################################################################
 
 
