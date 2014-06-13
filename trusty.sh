@@ -59,6 +59,22 @@ sudo apt-get install openssh-server -y
 
 
 
+############################ dhcp server ###############################
+sudo apt-get install dhcpd
+# You may want to change the start and end of the IP lease block by
+# edit the following config file:
+# /etc/udhcpd.conf
+#
+# default: 192.168.0.20 ~ 192.168.0.254
+#
+# sudo vi /etc/default/udhcpd
+# need to comment the following line
+# DHCPD_ENABLED="no"
+sudo service udhcpd restart
+########################################################################
+
+
+
 ############################# video program ############################
 sudo apt-get install mplayer -y
 sudo apt-get install smplayer -y
