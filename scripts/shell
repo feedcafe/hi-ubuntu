@@ -176,3 +176,6 @@ ffmpeg -f s16le -ar 16k -ac 1 -i file.pcm file.wav
 
 # power off ubuntu when vmplayer exits
 sudo su -c 'while [[ -d /proc/6077 ]]; do sleep 10; done; poweroff'
+
+# extract getevent data
+awk /"event3: EV_SYN SYN_REPORT 00000001"/ getevent.txt > tmp.txt 
