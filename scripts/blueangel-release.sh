@@ -43,13 +43,13 @@ cp *.so ${DEST_DIR}/device/mstar/common/libraries/bluetooth/mtk
 cp btconfig ${DEST_DIR}/device/mstar/common/preinstall/bluetooth
 cp mtkbt ${DEST_DIR}/device/mstar/common/preinstall/bluetooth
 
-# copy bluetooth driver#
+# copy bluetooth driver
 cp btmtk_usb.ko ${DEST_DIR}/device/mstar/mstarnapoli/preinstall/modules
 
 # commit to git repo
 cd ${DEST_DIR}/device/mstar/common
 rm ${DEST_DIR}/device/mstar/common/libraries/bluetooth/mtk/libbt-nano.so
-git commit -asm "add mtk prebuilt binaries (${RELEASE_VERSION}, ${RELEASE_DATE})"
+git commit -asm "add mtk prebuilt binaries (${RELEASE_VERSION}, date: ${RELEASE_DATE})"
 
 cd ${DEST_DIR}/device/mstar/mstarnapoli
 git commit -asm "bluetooth: add new mt7662 module driver"
