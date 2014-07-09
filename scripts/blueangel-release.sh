@@ -24,7 +24,7 @@ TMP_DATE=`echo $TAR_FILE | cut -d "_" -f1`
 TMP_VERSION=`echo $TAR_FILE | cut -d "_" -f5`
 
 RELEASE_DATE=`echo $TMP_DATE | cut -d "/" -f2`
-RELEASE_VERSION=`echo $TMP_VERSION | cut -d "." -f1,2`
+RELEASE_VERSION=`echo $TMP_VERSION | cut -d "." -f1,2,3`
 
 echo $TAR_FILE
 echo $RELEASE_DATE
