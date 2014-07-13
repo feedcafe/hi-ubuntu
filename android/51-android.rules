@@ -21,3 +21,6 @@ SUBSYSTEM=="usb", ATTRS{idVendor}=="201e", MODE="0666"
 
 # Owon PDS6062T Oscilloscope
 SUBSYSTEM=="usb", ATTRS{idVendor}=="5345", MODE="0666"
+
+# Huawei Technologies Co., Ltd.
+SUBSYSTEM=="usb", ATTRS{idVendor}=="12d1", MODE="0666"
