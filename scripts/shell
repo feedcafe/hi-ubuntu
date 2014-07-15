@@ -179,3 +179,8 @@ sudo su -c 'while [[ -d /proc/6077 ]]; do sleep 10; done; poweroff'
 
 # extract getevent data
 awk /"event3: EV_SYN SYN_REPORT 00000001"/ getevent.txt > tmp.txt 
+
+
+# fixed "Stream setup failed" issue when do connect to Audio Sink
+# issue the following command before do connect
+pactl load-module module-bluetooth-discover
