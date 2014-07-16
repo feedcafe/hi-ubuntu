@@ -184,3 +184,6 @@ awk /"event3: EV_SYN SYN_REPORT 00000001"/ getevent.txt > tmp.txt
 # fixed "Stream setup failed" issue when do connect to Audio Sink
 # issue the following command before do connect
 pactl load-module module-bluetooth-discover
+
+# print line number, used for debug
+echo $LINENO
