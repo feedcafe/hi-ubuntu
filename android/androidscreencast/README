@@ -1,0 +1,5 @@
+FAQ:
+
+1. how to use this tool?
+issue the following command in your terminal:
+javaws androidscreencast.jnlp
