@@ -10,3 +10,6 @@ git checkout -- <file or directory>
 
 # checkout git repo with submodules
 git clone --recursive https://github.com/android-rooting-tools/android_run_root_shell
+
+# used for ssh debugging
+ssh -vT linuxn00b@github.com
