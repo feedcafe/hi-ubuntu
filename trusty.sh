@@ -36,6 +36,20 @@ sudo apt-get install subversion -y
 ########################################################################
 
 
+
+########################### for lwqq ###################################
+sudo apt-get install cmake -y
+sudo apt-get install libpurple-dev -y
+sudo apt-get install libcurl4-openssl-dev -y
+sudo apt-get install libsqlite3-dev
+sudo apt-get install libmozjs-17.0-dev -y
+sudo apt-get install libev-dev -y
+sudo apt-get install libmozjs185-dev -y
+sudo apt-get install pidgin -y
+########################################################################
+
+
+
 ############################ linux kernel dev ##########################
 # make menuconfig need this
 sudo apt-get install libncurses5-dev -y
