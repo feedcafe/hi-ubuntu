@@ -13,3 +13,5 @@ git clone --recursive https://github.com/android-rooting-tools/android_run_root_
 
 # used for ssh debugging
 ssh -vT linuxn00b@github.com
+
+git rebase origin/name-of-upstream-branch
