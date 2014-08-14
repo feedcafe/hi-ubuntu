@@ -134,6 +134,8 @@ sudo apt-get install android-tools-fastboot
 # used for lookup LAN friends
 # sudo arp-scan -I eth0 -l
 sudo apt-get install arp-scan
+
+sudo apt-get install iperf
 ########################################################################
 
 
