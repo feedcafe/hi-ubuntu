@@ -136,6 +136,10 @@ sudo apt-get install android-tools-fastboot
 sudo apt-get install arp-scan
 
 sudo apt-get install iperf
+
+# Synergy (mouse and keyboard sharing software) for Windows,
+# Mac OS X and Linux
+sudo apt-get install synergy
 ########################################################################
 
 
