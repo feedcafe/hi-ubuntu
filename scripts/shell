@@ -187,3 +187,6 @@ pactl load-module module-bluetooth-discover
 
 # print line number, used for debug
 echo $LINENO
+
+# build kernel module
+arm-linux-gcc -D__KERNEL__ -I /home/work/linux-2.6.14/include/ -DKBUILD_BASENAME=leds -DMODULE -c led.c -o led.o
