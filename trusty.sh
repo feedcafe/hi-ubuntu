@@ -73,6 +73,23 @@ sudo apt-get install openssh-server -y
 
 
 
+############################## winmail.dat #############################
+# fix thunderbird winmail.dat issue
+sudo apt-get install tnef
+
+# extract attachment
+# tnef winmail.dat
+
+sudo apt-get install convmv
+
+# convert filename encoding
+# convmv -f gbk -t utf8 --notest *.docx
+
+convmv -r -f utf8 -t iso88591 *.mp3 --notest --nosmart && convmv -r -f gbk -t utf8 *.mp3 --notest --nosmart
+########################################################################
+
+
+
 ############################## sun jdk #################################
 ./jdk-6u26-linux-x64.bin
 sudo mv jdk1.6.0_26/ /usr/lib/jvm/
