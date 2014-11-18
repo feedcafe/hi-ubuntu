@@ -73,6 +73,29 @@ sudo apt-get install openssh-server -y
 
 
 
+############################# video program ############################
+sudo apt-get install mplayer -y
+sudo apt-get install smplayer -y
+sudo apt-get install winff libavcodec-extra-54 -y
+sudo apt-get install freetuxtv -y
+# for program "Videos" need to install the following packages to play
+# windoss asf files
+sudo apt-get install gstreamer1.0-plugins-ugly
+sudo apt-get install gstreamer1.0-libav
+########################################################################
+
+
+
+############################## Bluetooth ###############################
+sudo apt-get install blueman
+sudo apt-get install bluez-hcidump
+
+# used for locking/unlocking ubuntu
+sudo apt-get install blueproximity -y
+########################################################################
+
+
+
 ############################## winmail.dat #############################
 # fix thunderbird winmail.dat issue
 sudo apt-get install tnef
@@ -112,29 +135,6 @@ sudo apt-get install dhcpd
 # need to comment the following line
 # DHCPD_ENABLED="no"
 sudo service udhcpd restart
-########################################################################
-
-
-
-############################# video program ############################
-sudo apt-get install mplayer -y
-sudo apt-get install smplayer -y
-sudo apt-get install winff libavcodec-extra-54 -y
-sudo apt-get install freetuxtv -y
-# for program "Videos" need to install the following packages to play
-# windoss asf files
-sudo apt-get install gstreamer1.0-plugins-ugly
-sudo apt-get install gstreamer1.0-libav
-########################################################################
-
-
-
-############################## Bluetooth ###############################
-sudo apt-get install blueman
-sudo apt-get install bluez-hcidump
-
-# used for locking/unlocking ubuntu
-sudo apt-get install blueproximity -y
 ########################################################################
 
 
