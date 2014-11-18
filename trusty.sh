@@ -155,6 +155,10 @@ sudo apt-get install synergy
 # for building webqq-core
 # mvn clean install
 sudo apt-get install maven -y
+
+# sbc decode/encode
+# sbcdec -f test.pcm test.sbc
+sudo apt-get install sbc-tools
 ########################################################################
 
 
