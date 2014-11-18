@@ -92,6 +92,10 @@ sudo apt-get install bluez-hcidump
 
 # used for locking/unlocking ubuntu
 sudo apt-get install blueproximity -y
+
+# hcidump -w hcidump.cap
+# wireshark hcidump.cap
+sudo apt-get install wireshark -y
 ########################################################################
 
 
