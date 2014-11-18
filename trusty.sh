@@ -74,10 +74,10 @@ sudo apt-get install openssh-server -y
 
 
 ############################## sun jdk #################################
-./jdk-6u32-linux-i586.bin
-sudo mv jdk1.6.0_32/ /usr/lib/jvm/
-sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk1.6.0_32/bin/java 88
-sudo update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/jdk1.6.0_32/bin/javac 88
+./jdk-6u26-linux-x64.bin
+sudo mv jdk1.6.0_26/ /usr/lib/jvm/
+sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk1.6.0_26/bin/java 87
+sudo update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/jdk1.6.0_26/bin/javac 87
 # sudo update-alternatives --config java
 ########################################################################
 
