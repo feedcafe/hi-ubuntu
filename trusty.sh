@@ -151,6 +151,10 @@ sudo apt-get install iperf
 # Synergy (mouse and keyboard sharing software) for Windows,
 # Mac OS X and Linux
 sudo apt-get install synergy
+
+# for building webqq-core
+# mvn clean install
+sudo apt-get install maven -y
 ########################################################################
 
 
