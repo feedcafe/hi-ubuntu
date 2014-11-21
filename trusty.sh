@@ -154,7 +154,7 @@ sudo apt-get install nfs-kernel-server -y
 
 sudo apt-get install valgrind
 
-sudo apt-get install flashplugin-installer -y
+sudo apt-get install flashplugin-installer
 
 # cisco vpn
 sudo apt-get install openconnect -y
