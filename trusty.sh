@@ -167,6 +167,7 @@ sudo apt-get install errno -y
 sudo apt-get install android-tools-adb
 sudo apt-get install android-tools-fastboot
 sudo apt-get install phablet-tools -y
+sudo apt-get install eclipse -y
 
 # used for lookup LAN friends
 # sudo arp-scan -I eth0 -l
