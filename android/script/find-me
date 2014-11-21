@@ -1,0 +1,22 @@
+#!/system/bin/sh
+
+# pre-condition leave focus on off button
+
+while true
+do
+	# turn on beep
+	# send keyevent KEYCODE_RIGHT
+	input keyevent 22
+
+	# send keyevent KEYCODE_ENTER
+	input keyevent 66
+	sleep 1
+
+	# turn off beep
+	# send keyevent KEYCODE_LEFT
+	input keyevent 21
+
+	# send keyevent KEYCODE_ENTER
+	input keyevent 66
+	sleep 2
+done
