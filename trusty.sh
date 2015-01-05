@@ -73,6 +73,15 @@ sudo apt-get install openssh-server -y
 
 
 
+############################ ftp server ###############################
+sudo apt-get install vsftpd
+sudo sed -i 's/anonymous_enable=NO/anonymous_enable=yes/g' /etc/vsftpd.conf
+sudo service vsftpd restart
+sudo apt-get install filezilla -y
+########################################################################
+
+
+
 ############################# video program ############################
 sudo apt-get install mplayer -y
 sudo apt-get install smplayer -y
