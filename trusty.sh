@@ -50,6 +50,19 @@ sudo apt-get install pidgin -y
 
 
 
+######################### for usb dev ##################################
+# libusb
+sudo apt-get install libusb-dev
+########################################################################
+
+
+
+######################### for buildroot ################################
+sudo apt-get install texinfo -y
+########################################################################
+
+
+
 ############################ linux kernel dev ##########################
 # make menuconfig need this
 sudo apt-get install libncurses5-dev
