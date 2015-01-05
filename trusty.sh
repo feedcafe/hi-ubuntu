@@ -52,7 +52,7 @@ sudo apt-get install pidgin -y
 
 ############################ linux kernel dev ##########################
 # make menuconfig need this
-sudo apt-get install libncurses5-dev -y
+sudo apt-get install libncurses5-dev
 
 # a front end reader of trace-cmd output
 sudo apt-get install kernelshark -y
@@ -177,6 +177,9 @@ sudo apt-get install android-tools-adb
 sudo apt-get install android-tools-fastboot
 sudo apt-get install phablet-tools -y
 sudo apt-get install eclipse -y
+
+# mkimage
+sudo apt-get install u-boot-tools
 
 # used for lookup LAN friends
 # sudo arp-scan -I eth0 -l
