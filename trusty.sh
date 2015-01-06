@@ -29,6 +29,9 @@ sudo apt-get install lrzsz
 sudo apt-get install ibus ibus-pinyin ibus-table-wubi -y
 
 sudo apt-get install screen
+
+# feiQ
+sudo apt-get install iptux
 ############################ version control ###########################
 sudo apt-get install git-core -y
 sudo apt-get install git-email -y
