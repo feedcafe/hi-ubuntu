@@ -173,10 +173,15 @@ sudo service udhcpd restart
 
 
 
-############################## misc ####################################
-# nfs server
+############################# nfs server ###############################
 sudo apt-get install nfs-kernel-server -y
+sudo sed -i '$a/opt/nfsroot/       192.168.1.*(rw,sync,no_subtree_check)' /etc/exports
+sudo service nfs-kernel-server restart
+########################################################################
 
+
+
+############################## misc ####################################
 sudo apt-get install valgrind
 
 sudo apt-get install flashplugin-installer
