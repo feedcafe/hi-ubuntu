@@ -32,6 +32,24 @@ sudo apt-get install screen
 
 # feiQ
 sudo apt-get install iptux
+########################################################################
+
+
+
+############################# MediaWiki ################################
+sudo apt-get install tasksel -y
+sudo tasksel install lamp-server
+sudo apt-get install mediawiki -y
+sudo apt-get install imagemagick mediawiki-math php5-gd -y
+sudo sed -i 's/#Alias /Alias /g' /etc/mediawiki/apache.conf
+sudo a2enconf mediawiki
+sudo /etc/init.d/apache2 restart
+
+sudo cp downloads/LocalSettings.php /etc/mediawiki/LocalSettings.php
+########################################################################
+
+
+
 ############################ version control ###########################
 sudo apt-get install git-core -y
 sudo apt-get install git-email -y
