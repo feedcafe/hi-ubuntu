@@ -87,7 +87,6 @@ err_msg=(
 "Error enabling Bluetooth"
 "Error disabling Bluetooth"
 "a2dp ack : A2DP_CTRL_CMD_START, status 1"
-"start_audio_datapath: audiopath start failed"
 "btif_dm_search_services_evt Remote Service SDP failed. Trigger REMOVE_BOND"
 "can only be reconnected from device side"
 "btif_dm_start_discovery Pairing in progress. Cannot perform inquiry"
@@ -95,11 +94,15 @@ err_msg=(
 "bta_hh_le_write_rpt: no matching report"
 "uhid_write: Cannot write to uhid:Invalid argument"
 "bta_hh_co_send_hid_info: Error: failed to send DSCP, result ="
-"ERROR : timer_thread: tick delayed > 5 slots"
 "bta_gattc_deregister Deregister Failed unknown client if"
 "WARNING : BTU HCI(id=0) command timeout. opcode=0x"
-"No profiles. Maybe we will connect later"
 "SDP - Rcvd conn cnf with error"
+"No active a2dp connection"
+"In the given service, can not find matching record"
+"device descriptor read/64, error -110"
+"No profiles. Maybe we will connect later"
+"ERROR : timer_thread: tick delayed > 5 slots"
+"start_audio_datapath: audiopath start failed"
 )
 
 auto_categorize_bugs()
@@ -328,7 +331,7 @@ blue_common_log()
 	bluedroid_version
 
 	# logcat
-	cp /data/log.txt* $log_path/
+	cp $root_path/log.txt* $log_path/
 
 	# btsnoop and bt_config
 	mkdir $log_path/bluedroid/
@@ -343,14 +346,14 @@ blue_common_log()
 	procrank > $log_path/procrank.txt
 
 	# traces
-	if [ -d "/data/anr" ]; then
+	if [ -d "$root_path/anr" ]; then
 		mkdir $log_path/anr
-		cp /data/anr/* $log_path/anr/
+		cp $root_path/anr/* $log_path/anr/
 	fi
 
-	if [ -d "/data/tombstones" ]; then
+	if [ -d "$root_path/tombstones" ]; then
 		mkdir $log_path/tombstones
-		cp /data/tombstones/* $log_path/tombstones
+		cp $root_path/tombstones/* $log_path/tombstones
 	fi
 }
 
@@ -369,7 +372,7 @@ blue_post_process()
 	# pack all bluetooth related logs
 	cd $root_path
 	echo "Compressing logs"
-	busybox tar cvf /data/bluelog.tar $bluelog_path
+	busybox tar cvf $root_path/bluelog.tar $bluelog_path
 	busybox bzip2 -zvv bluelog.tar
 
 	# usb disk detected, copy to usb
@@ -415,10 +418,12 @@ blue_prepare()
 	# set timezone
 	setprop persist.sys.timezone Asia/Shanghai
 
-	# remove deprecated logs
-	rm /data/log.txt*
-	rm /data/anr/*
-	rm /data/tombstones/*
+	# remove outdated logs
+	rm $root_path/log.txt*
+	rm $root_path/anr/*
+	rm $root_path/tombstones/*
+	rm -fr $root_path/bluelog*
+
 
 	# make sure directory exist
 	if [ ! -d "$log_path" ]; then
@@ -455,6 +460,10 @@ blue_summary()
 
 main()
 {
+	if [ $1 = debug ]; then
+		auto_categorize_bugs
+		exit(0)
+	fi
 	blue_prepare
 
 	# copy logs including logcat, dmesg etc
