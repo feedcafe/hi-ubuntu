@@ -86,7 +86,7 @@ sudo apt-get install texinfo -y
 
 ############################ linux kernel dev ##########################
 # make menuconfig need this
-sudo apt-get install libncurses5-dev
+sudo apt-get install libncurses5-dev -y
 
 # a front end reader of trace-cmd output
 sudo apt-get install kernelshark -y
@@ -181,15 +181,11 @@ sudo update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/jdk1.6.0_26
 
 ############################ dhcp server ###############################
 sudo apt-get install dhcpd
-# You may want to change the start and end of the IP lease block by
-# edit the following config file:
-# /etc/udhcpd.conf
-#
-# default: 192.168.0.20 ~ 192.168.0.254
-#
-# sudo vi /etc/default/udhcpd
-# need to comment the following line
-# DHCPD_ENABLED="no"
+sudo sed -i 's/interface\teth0/interface\teth1/g' /etc/udhcpd.conf
+sudo sed -i 's/192.168.142/192.168.7/g' /etc/udhcpd.conf
+
+# enable dhcp
+sudo sed -i 's/DHCPD_ENABLED/\# DHCPD_ENABLED/g' /etc/default/udhcpd
 sudo service udhcpd restart
 ########################################################################
 
