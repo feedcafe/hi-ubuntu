@@ -190,3 +190,7 @@ echo $LINENO
 
 # build kernel module
 arm-linux-gcc -D__KERNEL__ -I /home/work/linux-2.6.14/include/ -DKBUILD_BASENAME=leds -DMODULE -c led.c -o led.o
+
+
+kill `busybox pidof bootanimation`
+setprop sys.bootanimation.exit 1
