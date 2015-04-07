@@ -55,6 +55,7 @@ err_msg=(
 "No active a2dp connection"
 "In the given service, can not find matching record"
 "device descriptor read/64, error -110"
+"Txctl wait timed out"
 "No profiles. Maybe we will connect later"
 "ERROR : timer_thread: tick delayed > 5 slots"
 "start_audio_datapath: audiopath start failed"
