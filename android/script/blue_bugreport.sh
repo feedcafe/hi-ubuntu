@@ -99,6 +99,7 @@ err_msg=(
 "SDP - Rcvd conn cnf with error"
 "No active a2dp connection"
 "In the given service, can not find matching record"
+"########### the following messages are not related to bluedroid ###########"
 "device descriptor read/64, error -110"
 "Txctl wait timed out"
 "No profiles. Maybe we will connect later"
@@ -135,6 +136,7 @@ check_bluedroid_log()
 			read yesno
 			case $yesno in
 				[Yy]* ) enable_btsnoop;
+					remove_outdated_logs;
 					reboot;;
 				[Nn]* ) exit;;
 				* ) echo "Please answer yes or no.";;
@@ -414,17 +416,19 @@ blue_post_process()
 	fi
 }
 
+remove_outdated_logs()
+{
+	# remove outdated logs
+	rm $root_path/log.txt*
+	rm -fr $root_path/anr/
+	rm -fr $root_path/tombstones/
+	rm -fr $root_path/bluelog*
+}
+
 blue_prepare()
 {
 	# set timezone
 	setprop persist.sys.timezone Asia/Shanghai
-
-	# remove outdated logs
-	rm $root_path/log.txt*
-	rm $root_path/anr/*
-	rm $root_path/tombstones/*
-	rm -fr $root_path/bluelog*
-
 
 	# make sure directory exist
 	if [ ! -d "$log_path" ]; then
@@ -461,10 +465,6 @@ blue_summary()
 
 main()
 {
-	if [ $1 = debug ]; then
-		auto_categorize_bugs
-		exit(0)
-	fi
 	blue_prepare
 
 	# copy logs including logcat, dmesg etc
