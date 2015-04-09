@@ -99,6 +99,8 @@ err_msg=(
 "SDP - Rcvd conn cnf with error"
 "No active a2dp connection"
 "In the given service, can not find matching record"
+"Timeout will setting scan mode..Continuing with disable"
+"Failed HID channel connection, status: 4"
 "########### the following messages are not related to bluedroid ###########"
 "device descriptor read/64, error -110"
 "Txctl wait timed out"
@@ -386,7 +388,7 @@ blue_post_process()
 		busybox md5sum $root_path/bluelog.tar.bz2
 		busybox md5sum $mount_point/bluelog.tar.bz2
 		echo "done, please remove your usb disk"
-		# rm -fr $root_path/bluelog*
+		rm -fr $root_path/bluelog*
 		exit
 	fi
 
