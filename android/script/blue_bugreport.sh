@@ -101,6 +101,7 @@ err_msg=(
 "In the given service, can not find matching record"
 "Timeout will setting scan mode..Continuing with disable"
 "Failed HID channel connection, status: 4"
+"frame_period_callback frame_period:65535"
 "########### the following messages are not related to bluedroid ###########"
 "device descriptor read/64, error -110"
 "Txctl wait timed out"
