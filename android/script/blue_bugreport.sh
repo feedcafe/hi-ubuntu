@@ -102,6 +102,7 @@ err_msg=(
 "frame_period_callback frame_period:65535"
 "No Bluetooth Service (Bluetooth Hardware Not Present)"
 "Reason : 8 (0x08)"
+"why this issue happen"
 "########### the following messages are not related to bluedroid ###########"
 "device descriptor read/64, error -110"
 "Txctl wait timed out"
