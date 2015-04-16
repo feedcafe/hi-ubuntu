@@ -457,7 +457,7 @@ blue_summary()
 	echo "#                                                                 #"
 	echo "###################################################################"
 
-	product_name=`getprop ro.product.name`
+	product_name=`getprop ro.build.product.name`
 	build_date=`getprop ro.build.date`
 	chipset=`grep 'Chipset BCM43' $root_path/log.txt*|busybox cut -d " " -f 9,10`
 	version=`grep BDROID $root_path/log.txt* -m 1|busybox cut -d " " -f 11,12,13,14,15`
