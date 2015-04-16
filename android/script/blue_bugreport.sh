@@ -116,7 +116,7 @@ auto_categorize_bugs()
 	# loop through err messages
 	for i in "${err_msg[@]}"
 	do
-		grep "$i" $root_path/log.txt* >> $log_path/summary.txt
+		grep -m 1 "$i" $root_path/log.txt* >> $log_path/summary.txt
 	done
 
 	lines=`busybox wc -l $log_path/summary.txt|busybox cut -d " " -f1`
@@ -387,6 +387,7 @@ blue_post_process()
 	# pack all bluetooth related logs
 	cd $root_path
 	echo "Compressing logs ..."
+	rm -fr bluelog.tar*
 	busybox tar cvf $root_path/bluelog.tar $bluelog_path
 	busybox bzip2 -zvv bluelog.tar
 
