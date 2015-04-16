@@ -328,7 +328,14 @@ blue_common_log()
 
 	busybox lsusb > $log_path/lsusb.txt
 
-	mount -t debugfs none /sys/kernel/debug
+	debugfs=`mount | grep debugfs`
+	if [ $? -eq 1 ]; then
+		echo "debugfs not mounted, mounting debugfs ..."
+		mount -t debugfs none /sys/kernel/debug
+	else
+		echo "debugfs already mounted"
+	fi
+
 	cat /sys/kernel/debug/usb/devices >> $log_path/lsusb.txt
 
 	lsmod > $log_path/lsmod.txt
