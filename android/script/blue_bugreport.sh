@@ -32,10 +32,10 @@ usb_detect()
 	usb=`mount | grep usbdisk`
 
 	if [ $? -eq 1 ]; then
-		echo "usb disk not detected"
+		echo -e "\033[41;37musb disk not detected\033[0m"
 		return 1
 	else
-		echo "usb disk detected"
+		echo -e "\033[44;37musb disk detected\033[0m"
 		mount_point=`echo $usb|busybox cut -d " " -f2`
 		echo $mount_point
 		return 0
@@ -121,7 +121,9 @@ auto_categorize_bugs()
 
 	lines=`busybox wc -l $log_path/summary.txt|busybox cut -d " " -f1`
 	if [ $lines -eq 1 ]; then
-		echo "new case, need to do scene investigation"
+		echo -e "\033[44;37m############################################################\033[0m"
+		echo -e "\033[44;37m######## new case, need to do scene investigation ##########\033[0m"
+		echo -e "\033[44;37m############################################################\033[0m"
 	else
 		cat $log_path/summary.txt
 	fi
@@ -383,7 +385,7 @@ blue_post_process()
 
 	# pack all bluetooth related logs
 	cd $root_path
-	echo "Compressing logs"
+	echo "Compressing logs ..."
 	busybox tar cvf $root_path/bluelog.tar $bluelog_path
 	busybox bzip2 -zvv bluelog.tar
 
@@ -394,7 +396,7 @@ blue_post_process()
 		sync
 		busybox md5sum $root_path/bluelog.tar.bz2
 		busybox md5sum $mount_point/bluelog.tar.bz2
-		echo "done, please remove your usb disk"
+		echo -e "\033[44;37mdone, please remove your usb disk\033[0m"
 		rm -fr $root_path/bluelog*
 		exit
 	fi
@@ -465,11 +467,11 @@ blue_summary()
 	addr=`busybox grep Address $bluedroid_path/bt_config.xml|busybox cut -d ">" -f2`
 	bdaddr=`echo $addr|busybox cut -d "<" -f1`
 
-	echo "## product name : $product_name"
-	echo "## build date   : $build_date"
-	echo "## bdaddr       : $bdaddr"
-	echo "## chipset      : $chipset"
-	echo "## droid version: $version"
+	echo -e "\033[44;37m## product name \033[0m: $product_name"
+	echo -e "\033[44;37m## build date   \033[0m: $build_date"
+	echo -e "\033[44;37m## bdaddr       \033[0m: $bdaddr"
+	echo -e "\033[44;37m## chipset      \033[0m: $chipset"
+	echo -e "\033[44;37m## droid version\033[0m: $version"
 }
 
 main()
