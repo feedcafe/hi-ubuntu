@@ -72,7 +72,7 @@ auto_categorize_bugs()
 	# loop through err messages
 	for i in "${err_msg[@]}"
 	do
-		grep -A 5 -B 5 "$i" -r $root_path/ >> /tmp/summary.txt
+		grep "$i" -r $root_path/ >> /tmp/summary.txt
 		if [ $? -eq 0 ]; then
 			echo "#########################################################" >> /tmp/summary.txt
 		fi
@@ -84,7 +84,6 @@ auto_categorize_bugs()
 	else
 		cat /tmp/summary.txt
 	fi
-
 }
 
 # bluedroid version

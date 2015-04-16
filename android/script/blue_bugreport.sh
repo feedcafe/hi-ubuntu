@@ -116,7 +116,7 @@ auto_categorize_bugs()
 	# loop through err messages
 	for i in "${err_msg[@]}"
 	do
-		grep -A 5 -B 5 "$i" $root_path/log.txt* >> $log_path/summary.txt
+		grep "$i" $root_path/log.txt* >> $log_path/summary.txt
 	done
 
 	lines=`busybox wc -l $log_path/summary.txt|busybox cut -d " " -f1`
@@ -125,7 +125,6 @@ auto_categorize_bugs()
 	else
 		cat $log_path/summary.txt
 	fi
-
 }
 
 # check bluedroid log level
