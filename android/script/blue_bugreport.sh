@@ -142,7 +142,8 @@ check_bluedroid_log()
 				[Yy]* ) enable_btsnoop;
 					remove_outdated_logs;
 					reboot;;
-				[Nn]* ) exit;;
+				[Nn]* ) enable_btsnoop;
+					break;;
 				* ) echo "Please answer yes or no.";;
 			esac
 		done
