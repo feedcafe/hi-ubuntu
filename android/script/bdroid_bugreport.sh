@@ -67,23 +67,15 @@ err_msg=(
 
 auto_categorize_bugs()
 {
-	echo `date +%F-%H:%M:%S` > /tmp/summary.txt
-	echo "#########################################################" >> /tmp/summary.txt
+	echo "#########################################################"
 	# loop through err messages
 	for i in "${err_msg[@]}"
 	do
-		grep "$i" -r $root_path/ >> /tmp/summary.txt
+		grep -m 1 --color=auto -A 5 -B 5 "$i" -r $root_path/
 		if [ $? -eq 0 ]; then
-			echo "#########################################################" >> /tmp/summary.txt
+			echo "#########################################################"
 		fi
 	done
-
-	lines=`wc -l /tmp/summary.txt|cut -d " " -f1`
-	if [ $lines -eq 1 ]; then
-		echo "new case, need to do scene investigation"
-	else
-		cat /tmp/summary.txt
-	fi
 }
 
 # bluedroid version
