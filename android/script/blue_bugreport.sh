@@ -133,11 +133,10 @@ auto_categorize_bugs()
 }
 
 # check bluedroid log level
-# FIXME [: 2: unexpected operator/operand
 check_bluedroid_log()
 {
 	log_level=`busybox grep 'TRC_BTIF=2' $bt_stack|busybox cut -d "=" -f 2`
-	if [ $log_level -eq 2 ]; then
+	if [ "$log_level" -eq 2 ]; then
 		while true; do
 			echo "Do you wish to enable bluedroid log? [Yes/No], need reboot"
 			read yesno
