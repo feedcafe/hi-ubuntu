@@ -158,7 +158,7 @@ check_bluedroid_log()
 # bluedroid version
 bluedroid_version()
 {
-	grep BDROID -m 1 $root_path/log.txt*> $log_path/version.txt
+	grep -m 1 BDROID $root_path/log.txt*> $log_path/version.txt
 	if [ $? -eq 0 ]; then
 		cat $log_path/version.txt
 	else
@@ -471,8 +471,8 @@ blue_summary()
 
 	product_name=`getprop ro.build.product.name`
 	build_date=`getprop ro.build.date`
-	chipset=`grep 'Chipset BCM43' $root_path/log.txt*|busybox cut -d " " -f 9,10`
-	version=`grep BDROID $root_path/log.txt* -m 1|busybox cut -d " " -f 11,12,13,14,15`
+	chipset=`grep -m 1 'Chipset BCM43' $root_path/log.txt*|busybox cut -d " " -f 9,10`
+	version=`grep -m 1 BDROID $root_path/log.txt* |busybox cut -d " " -f 11,12,13,14,15`
 
 	addr=`busybox grep Address $bluedroid_path/bt_config.xml|busybox cut -d ">" -f2`
 	bdaddr=`echo $addr|busybox cut -d "<" -f1`
