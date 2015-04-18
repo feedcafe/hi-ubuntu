@@ -450,6 +450,15 @@ blue_prepare()
 	# set timezone
 	setprop persist.sys.timezone Asia/Shanghai
 
+	# setprop for bluetooth test, log file size limit
+	# will be changed to 10 MB after reboot
+	# logcat started in:
+	#    init.bigfish.sh(hisilicon)
+	#    post-init.sh(mediatek)
+	if [ x `getprop sys.bluetooth.stress_test` == x'' ]; then
+		echo 'sys.bluetooth.stress_test=1' >> /system/build.prop
+	fi
+
 	# make sure directory exist
 	if [ ! -d "$log_path" ]; then
 		mkdir -p $log_path
