@@ -401,6 +401,11 @@ blue_post_process()
 		sync
 		busybox md5sum $root_path/bluelog.tar.bz2
 		busybox md5sum $mount_point/bluelog.tar.bz2
+
+		# notfiy user that copy has completed
+		am start -a android.intent.action.VIEW  -t 'audio/ogg' \
+			-d 'file:///system/media/audio/notifications/TaDa.ogg'
+
 		echo -e "\033[44;37mdone, please remove your usb disk\033[0m"
 		rm -fr $root_path/bluelog*
 		exit
