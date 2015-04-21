@@ -25,8 +25,7 @@ err_msg=(
 "<getbuf: out of buffers>"
 "H4: Unable to acquire buffer for incoming HCI message"
 "Failed HID channel connection, status"
-"name: BTU  >>> com.android.bluetooth <<<"
-"name: BTIF  >>> com.android.bluetooth <<<"
+">>> com.android.bluetooth <<<"
 "Process com.android.bluetooth (pid "
 "ANR in com.android.bluetooth"
 "(BTM_ReadInquiryRspTxPower"
@@ -53,6 +52,7 @@ err_msg=(
 "GKI_add_to_timer_list(): timer list corrupted!"
 "No such connection need to be cancelled"
 "L2CAP got BLE scanner conn_comp in bad state"
+"[USB]Disconnect interrupt  ="
 
 
 "btif_storage_hisense_rc_record_valid: we found a Hisense RC but without pid"
