@@ -479,8 +479,25 @@ blue_summary()
 
 	product_name=`getprop ro.build.product.name`
 	build_date=`getprop ro.build.date`
-	chipset=`grep -m 1 'Chipset BCM43' $root_path/log.txt*|busybox cut -d " " -f 9,10`
-	version=`grep -m 1 BDROID $root_path/log.txt* |busybox cut -d " " -f 11,12,13,14,15`
+
+
+	tmp=`grep 'D/bt_hwcfg' -m 1 -rhc $root_path`
+	if [ $? -eq 0 ]; then
+		# logcat -v time
+		chipset=`grep -m 1 'Chipset BCM43' $root_path/log.txt*|busybox cut -d " " -f 5,6`
+	else
+		# logcat -v threadtime
+		chipset=`grep -m 1 'Chipset BCM43' $root_path/log.txt*|busybox cut -d " " -f 9,10`
+	fi
+
+	tmp=`grep 'E/bt-btu' -m 1 -rhc $root_path`
+	if [ $? -eq 0 ]; then
+		# logcat -v time
+		version=`grep -m 1 BDROID $root_path/log.txt* |busybox cut -d " " -f 7,8,9,10,11`
+	else
+		# logcat -v threadtime
+		version=`grep -m 1 BDROID $root_path/log.txt* |busybox cut -d " " -f 11,12,13,14,15`
+	fi
 
 	addr=`busybox grep Address $bluedroid_path/bt_config.xml|busybox cut -d ">" -f2`
 	bdaddr=`echo $addr|busybox cut -d "<" -f1`

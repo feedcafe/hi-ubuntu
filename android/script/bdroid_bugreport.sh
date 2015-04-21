@@ -101,12 +101,27 @@ blue_summary()
 	echo "#                                                                 #"
 	echo "###################################################################"
 
-	chipset=`grep 'Chipset BCM43' -r $root_path/|cut -d " " -f 8,9,10`
-	version=`grep BDROID -r $root_path/ -m 1|cut -d " " -f 11,12,13,14,15`
+	tmp=`grep 'D/bt_hwcfg' -m 1 -rhc $root_path`
+	if [ $? -eq 0 ]; then
+		# logcat -v time
+		chipset=`grep -m 1 'Chipset BCM43' -r $root_path/|cut -d " " -f 5,6`
+	else
+		# logcat -v threadtime
+		chipset=`grep -m 1 'Chipset BCM43' -r $root_path/|cut -d " " -f 8,9,10`
+	fi
 
-	echo "bdaddr: "
-	#grep Address -m 1 `find . -name bt_config.xml`|cut -d ">" -f2
-	#bdaddr=`echo $addr|cut -d "<" -f1`
+	tmp=`grep 'E/bt-btu' -m 1 -rhc $root_path`
+	if [ $? -eq 0 ]; then
+		# logcat -v time
+		version=`grep BDROID -r $root_path/ -m 1|cut -d " " -f 7,8,9,10,11`
+	else
+		# logcat -v threadtime
+		version=`grep BDROID -r $root_path/ -m 1|cut -d " " -f 11,12,13,14,15`
+	fi
+
+	# echo "bdaddr: "
+	# grep Address -m 1 `find . -name bt_config.xml`|cut -d ">" -f2
+	# bdaddr=`echo $addr|cut -d "<" -f1`
 
 	echo "## chipset      : $chipset"
 	echo "## droid version: $version"
