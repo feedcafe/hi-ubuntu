@@ -15,3 +15,7 @@ git clone --recursive https://github.com/android-rooting-tools/android_run_root_
 ssh -vT linuxn00b@github.com
 
 git rebase origin/name-of-upstream-branch
+
+git format-patch -6 --cover-letter
+
+git send-email --to fudongbai@gmail.com  --cc fudong@google.com
