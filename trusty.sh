@@ -158,6 +158,10 @@ sudo apt-get install wireshark -y
 sudo apt-get install libudev-dev
 sudo apt-get install libical-dev
 sudo apt-get install libreadline-dev -y
+
+# sbc
+sudo apt-get install libsndfile1-dev
+sudo apt-get install libsbc-dev
 ########################################################################
 
 
