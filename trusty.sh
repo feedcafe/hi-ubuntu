@@ -133,6 +133,16 @@ sudo apt-get install gstreamer1.0-libav
 
 
 
+############################# android stuff ############################
+sudo apt-get install flex -y
+sudo apt-get install bison -y
+sudo apt-get install gperf
+
+
+########################################################################
+
+
+
 ############################## Bluetooth ###############################
 sudo apt-get install blueman
 sudo apt-get install bluez-hcidump
