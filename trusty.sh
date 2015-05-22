@@ -163,6 +163,10 @@ sudo apt-get install libreadline-dev -y
 # sbc
 sudo apt-get install libsndfile1-dev
 sudo apt-get install libsbc-dev
+
+# for wireshar build
+sudo apt-get install libqt4-dev -y
+sudo apt-get install libpcap-dev -y
 ########################################################################
 
 
