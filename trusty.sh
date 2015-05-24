@@ -124,6 +124,10 @@ sudo apt-get install freetuxtv -y
 
 # for program "Videos"
 sudo apt-get install gstreamer1.0-plugins-bad-videoparsers -y
+sudo apt-get install gstreamer1.0-plugins-bad-faad
+sudo apt-get install libopencv-video2.4 -y
+sudo apt-get install libmpg123-0
+
 
 # for program "Videos" need to install the following packages to play
 # windoss asf files
