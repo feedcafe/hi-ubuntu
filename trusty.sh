@@ -158,6 +158,7 @@ sudo apt-get install blueproximity -y
 # wireshark hcidump.cap
 sudo apt-get install wireshark -y
 sudo apt-get install tshark
+sudo apt-get install wireshark-dev -y
 
 # bluez-5.3
 sudo apt-get install libudev-dev
