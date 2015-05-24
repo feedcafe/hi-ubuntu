@@ -194,3 +194,7 @@ arm-linux-gcc -D__KERNEL__ -I /home/work/linux-2.6.14/include/ -DKBUILD_BASENAME
 
 kill `busybox pidof bootanimation`
 setprop sys.bootanimation.exit 1
+
+# tshark
+tshark -r btsnoop_hci.log -Y 'sbc' -w btsnoop_hci.sbc
+tshark -nr btsnoop_hci.log -Vx
