@@ -34,15 +34,17 @@ if has('mouse')
   set mouse=a
 endif
 
-color torte 
+color torte
 set vb			" turn off the annoying beep sound
 set ai
 set cindent
 set incsearch		" do incremental searching
 filetype plugin indent on
 
+let showmarks_marks = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
 " Enable ShowMarks
-let showmarks_enable = 0
+let showmarks_enable = 1
 " Show which marks
 let showmarks_include = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 " Ignore help, quickfix, non-modifiable buffers
