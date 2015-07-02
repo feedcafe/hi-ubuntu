@@ -133,6 +133,10 @@ sudo apt-get install libmpg123-0
 # windoss asf files
 sudo apt-get install gstreamer1.0-plugins-ugly
 sudo apt-get install gstreamer1.0-libav
+
+# for avi file merge
+# avimerge -i a.avi b.avi -o c.avi
+sudo apt-get install transcode -y
 ########################################################################
 
 
