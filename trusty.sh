@@ -74,6 +74,9 @@ sudo apt-get install pidgin -y
 ######################### for usb dev ##################################
 # libusb
 sudo apt-get install libusb-dev
+
+sudo apt-get install libusb-1.0-0-dev -y
+sudo apt-get install python-usb
 ########################################################################
 
 
