@@ -176,6 +176,8 @@ sudo apt-get install libsbc-dev
 # for wireshar build
 sudo apt-get install libqt4-dev -y
 sudo apt-get install libpcap-dev -y
+
+sudo apt-get install libbluetooth-dev
 ########################################################################
 
 
