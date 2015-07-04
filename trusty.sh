@@ -140,6 +140,9 @@ sudo apt-get install gstreamer1.0-libav
 # for avi file merge
 # avimerge -i a.avi b.avi -o c.avi
 sudo apt-get install transcode -y
+
+# extract video from iso and convert to avi file
+sudo apt-get install dvdrip -y
 ########################################################################
 
 
