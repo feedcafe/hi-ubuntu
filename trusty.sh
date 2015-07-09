@@ -273,6 +273,11 @@ sudo apt-get install maven -y
 # sbc decode/encode
 # sbcdec -f test.pcm test.sbc
 sudo apt-get install sbc-tools
+
+sudo apt-get install feedgnuplot -y
+
+# for ubertooth-specan-ui
+sudo apt-get install python-pyside -y
 ########################################################################
 
 
