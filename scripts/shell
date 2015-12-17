@@ -198,3 +198,6 @@ setprop sys.bootanimation.exit 1
 # tshark
 tshark -r btsnoop_hci.log -Y 'sbc' -w btsnoop_hci.sbc
 tshark -nr btsnoop_hci.log -Vx
+
+# renaming files with whitespaces
+rename 's/ /./g' *
