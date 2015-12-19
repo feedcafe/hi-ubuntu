@@ -281,6 +281,10 @@ sudo apt-get install feedgnuplot -y
 
 # for ubertooth-specan-ui
 sudo apt-get install python-pyside -y
+
+# disable auto mount mtp
+gsettings set org.gnome.desktop.media-handling automount-open false
+
 ########################################################################
 
 
