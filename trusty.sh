@@ -32,6 +32,9 @@ sudo apt-get install screen
 
 # feiQ
 sudo apt-get install iptux
+
+# for iPod
+sudo apt-get install gtkpod -y
 ########################################################################
 
 
