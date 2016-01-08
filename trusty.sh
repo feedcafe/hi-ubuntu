@@ -301,7 +301,7 @@ sudo chown -R www-data /usr/share/wordpress
 sudo ln -s /opt/fdbai/wordpress/linuxabc /var/www/linuxabc
 sudo chown -R www-data /opt/fdbai/wordpress/linuxabc
 
-sudo sed -i 's/Listen 80/Listen 8787/g' /etc/apache2/ports.conf
+sudo sed -i 's/Listen 80/Listen 8989/g' /etc/apache2/ports.conf
 
 sudo service apache2 restart
 
