@@ -285,6 +285,11 @@ sudo apt-get install python-pyside -y
 # disable auto mount mtp
 gsettings set org.gnome.desktop.media-handling automount-open false
 
+sudo apt-get install gphoto2 -y
+
+gphoto2 --port=usb: -R -P
+gphoto2 --port=usb: -R -P 100-107
+
 ########################################################################
 
 
