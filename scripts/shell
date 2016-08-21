@@ -3,6 +3,9 @@
 find . -type d -empty -exec rmdir {} \;
 find . -type d -empty | xargs rmdir
 
+# move files to specified directory
+find . -name *.jpg |xargs -i mv {} ~/moments
+
 
 ########################################################################
 # patch kernel
