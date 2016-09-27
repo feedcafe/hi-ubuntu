@@ -6,6 +6,9 @@ find . -type d -empty | xargs rmdir
 # move files to specified directory
 find . -name *.jpg |xargs -i mv {} ~/moments
 
+# install raspbian image to sd card
+umount /dev/sdc1
+sudo dd bs=4M if=2016-05-27-raspbian-jessie.img of=/dev/sdc
 
 ########################################################################
 # patch kernel
